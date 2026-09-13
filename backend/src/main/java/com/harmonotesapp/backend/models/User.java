@@ -27,6 +27,14 @@ public class User {
 
     }
 
+    // this annotation is called a lifecycle callback provided by JPA, putting it on the onCreate
+    // method allows it to run automatically right before the entity is saved the very first time.
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+    }
+
     public Long getId() {
         return id;
     }
