@@ -1,6 +1,7 @@
 package com.harmonotesapp.backend.controllers;
 
 import com.harmonotesapp.backend.models.PracticeExercise;
+import com.harmonotesapp.backend.repositories.PracticeExerciseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
