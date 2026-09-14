@@ -1,6 +1,7 @@
 package com.harmonotesapp.backend.models;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -10,29 +11,16 @@ public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
         private Long id;
-    @Column(name="first_name")
         private String firstName;
-    @Column(name="last_name")
         private String lastName;
-    @Column(name="email_address")
         private String emailAddress;
-    @Column(name="password")
         private String password;
-    @Column(name="role")
         private String role;
-    @Column(name="created_at")
+        @Column(updatable = false)
+        @CreationTimestamp
         private LocalDateTime createdAt;
 
     public User() {
-
-    }
-
-    // this annotation is called a lifecycle callback provided by JPA, putting it on the onCreate
-    // method allows it to run automatically right before the entity is saved the very first time.
-
-    @PrePersist
-    protected void onCreate() {
-        createdAt = LocalDateTime.now();
     }
 
     public Long getId() {

@@ -7,11 +7,8 @@ import jakarta.persistence.*;
         @Id
         @GeneratedValue(strategy=GenerationType.IDENTITY)
             private Long id;
-        @Column(name="session_focus")
             private String sessionFocus;
-        @Column(name="session_duration")
             private String sessionDuration;
-        @Column(name="session_triumphs_challenges")
             private String sessionTriumphsChallenges;
 
         public PracticeSession() {
