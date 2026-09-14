@@ -1,0 +1,385 @@
+[
+    {
+        "id": 1,
+        "type": "song",
+        "title": "Another One Bites the Dust",
+        "artist": "Queen",
+        "instrument": ["piano"],
+        "difficulty": "Beginner",
+        "file": "/mock-data/sheet-music/another-one-bites-the-dust-queen-big-note-piano.pdf",
+        "audio": []
+    },
+    {
+        "id": 2,
+        "type": "song",
+        "title": "Across the Universe",
+        "artist": "The Beatles",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": "Beginner",
+        "file": "/mock-data/sheet-music/Across-the-universe.pdf",
+        "audio": [
+            {
+                "label": "With Intro Click",
+                "file": "/mock-data/audio/Across-the-Universe_W-IntroClick.wav"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "type": "exercise",
+        "title": "Preparatory Exercises No Labels",
+        "artist": "Aloys Schmitt",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": "Intermediate",
+        "file": "/mock-data/exercises/Prep-excercise-Rewrite-beta-1.pdf",
+        "audio": []
+    },
+    {
+        "id": 4,
+        "type": "exercise",
+        "title": "Finger Power 1 (pg. 1-5)",
+        "artist": null,
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": "Beginner",
+        "file": "/mock-data/exercises/FingerPower1pg1-5.pdf",
+        "audio": []
+    },
+    {
+        "id": 5,
+        "type": "reference",
+        "title": "Music Theory Reference Sheet",
+        "artist": null,
+        "instrument": [
+            "all"
+        ],
+        "difficulty": "Beginner",
+        "file": "/mock-data/resources/Ryarsh-Theory.pdf",
+        "audio": []
+    },
+    {
+        "id": 6,
+        "type": "song",
+        "title": "Moon River",
+        "artist": "Henry Mancini",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": "Beginner",
+        "file": "/mock-data/sheet-music/MoonRiver.pdf",
+        "audio": [
+            {
+                "label": "80 BPM with Intro Click / ",
+                "file": "/mock-data/audio/Moon-River-Piano-80-bpmW_Click.wav"
+            },
+            {
+                "label": "60 BPM",
+                "file": "/mock-data/audio/Moon-River-Piano-60bpmW_ntro_Click.wav"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "type": "song",
+        "title": "The Girl from Ipanema",
+        "artist": "Antonio Carlos Jobim",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": "Intermediate",
+        "file": "/mock-data/sheet-music/Girl-From-Impanema.pdf",
+        "audio": []
+    },
+    {
+        "id": 8,
+        "type": "song",
+        "title": "I Miss You",
+        "artist": "Aaron Hall",
+        "instrument": [
+            "piano", 
+            "guitar"
+        ],
+        "difficulty": "Intermediate",
+        "file": "/mock-data/sheet-music/i-miss-you-aaron-hall-piano-vocal-guitar.pdf",
+        "audio": []
+    },
+    {
+        "id": 9,
+        "type": "song",
+        "title": "Theme from Spider-Man",
+        "artist": "Bob Harris & Paul Francis Webster",
+        "instrument": [
+            "piano",
+            "guitar"
+        ],
+        "difficulty": "Intermediate",
+        "file": "/mock-data/sheet-music/theme-from-spider-man-paul-francis-webster-tv-theme-song-piano-vocal-guitar(1).pdf",
+        "audio": [
+            {
+                "label": "100 BPM / ",
+                "file": "/mock-data/audio/Spiderman-Theme-100Bpm.wav"
+            },
+            {
+                "label": "60 BPM",
+                "file": "/mock-data/audio/Spiderman-Theme-60-BPM.wav"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "type": "song",
+        "title": "Wild Mignonette",
+        "artist": "Gustav Cornelius Gurlitt",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": "Intermediate",
+        "file": "/mock-data/sheet-music/wild-Migonette.pdf",
+        "audio": []
+    },
+    {
+        "id": 11,
+        "type": "exercise",
+        "title": "Rory Chord Etude",
+        "artist": null,
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": "Beginner",
+        "file": "/mock-data/sheet-music/Rory-Chord-Etude.pdf",
+        "audio": []
+    },
+    {
+        "id": 12,
+        "type": "reference",
+        "title": "All Major Scales",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Major-scales.pdf",
+        "audio": []
+    },
+    {
+        "id": 13,
+        "type": "reference",
+        "title": "All Major and Minor Scales",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/All-Minor-and-major-scales.pdf",
+        "audio": []
+    },
+    {
+        "id": 14,
+        "type": "reference",
+        "title": "Chords and Transposition",
+        "artist": null,
+        "instrument": [
+            "all"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Chords-and-Transposition.pdf",
+        "audio": []
+    },
+    {
+        "id": 15,
+        "type": "reference",
+        "title": "Simple Meter Rhythm Chart",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "all"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Simple-Meter-Rhythm-Chart.pdf",
+        "audio": []
+    },
+    {
+        "id": 16,
+        "type": "reference",
+        "title": "Key Signatures",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "all"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Key-signatures.pdf",
+        "audio": []
+    },
+    {
+        "id": 17,
+        "type": "reference",
+        "title": "Solf\u00e8ge Hand Signs",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "all"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Solfege-Hand-Signs.pdf",
+        "audio": []
+    },
+    {
+        "id": 18,
+        "type": "reference",
+        "title": "Standard Notation Jig",
+        "artist": "Scott Sharp",
+        "instrument": [
+            "all"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/standard-notation.pdf",
+        "audio": []
+    },
+    {
+        "id": 19,
+        "type": "reference",
+        "title": "Ultimate Chord Cheat Sheet",
+        "artist": "April Wright",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Ultimate-Chords-Cheat-Sheet.pdf",
+        "audio": []
+    },
+    {
+        "id": 20,
+        "type": "song",
+        "title": "Michelle",
+        "artist": "The Beatles",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/sheet-music/Michelle.pdf",
+        "audio": []
+    },
+    {
+        "id": 21,
+        "type": "reference",
+        "title": "Ornament Guide",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/ornament-guide.pdf",
+        "audio": []
+    },
+    {
+        "id": 22,
+        "type": "reference",
+        "title": "Piano Posture Checklist",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Piano-posture-checklist.pdf",
+        "audio": []
+    },
+    {
+        "id": 23,
+        "type": "reference",
+        "title": "Articulations Guide",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "all"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Articulations-guide.pdf",
+        "audio": []
+    },
+    {
+        "id": 24,
+        "type": "reference",
+        "title": "All Natural, Harmonic & Melodic Minor Scales",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Minor-Scales.pdf",
+        "audio": []
+    },
+    {
+        "id": 25,
+        "type": "reference",
+        "title": "Pentascale Guide",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Pentascale-Guide.pdf",
+        "audio": []
+    },
+    {
+        "id": 26,
+        "type": "exercise",
+        "title": "Preparatory Exercises With Labels",
+        "artist": null,
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": "beginner",
+        "file": "/mock-data/exercises/Prepatory-exercises-guided.pdf",
+        "audio": []
+    },
+    {
+        "id": 27,
+        "type": "reference",
+        "title": "Rhythm Words Guide",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "all"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Rhythm-Words-guide.pdf",
+        "audio": []
+    },
+    {
+        "id": 28,
+        "type": "reference",
+        "title": "Tempo Marking Chart",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "all"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Tempo-Marking-Chart.pdf",
+        "audio": []
+    },
+    {
+        "id": 29,
+        "type": "reference",
+        "title": "Grand Staff Guide",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "piano"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/grand-staff-guide.pdf",
+        "audio": []
+    },
+    {
+        "id": 30,
+        "type": "reference",
+        "title": "Tempo Change Guide",
+        "artist": "Hoffman Academy",
+        "instrument": [
+            "all"
+        ],
+        "difficulty": null,
+        "file": "/mock-data/resources/Tempo-change-guide.pdf",
+        "audio": []
+    }
+]
