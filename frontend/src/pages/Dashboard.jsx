@@ -74,7 +74,7 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
         
        const fetchPracticeData = async () => {
            try {
-               const response = await fetch('/mock-data/practiceData.json');
+               const response = await fetch('http://localhost:8080/api/practice-exercises');
                if(!response.ok) {
                    throw new Error(`Error collecting practice exercises! Status:${response.status}`);
                }
