@@ -48,4 +48,5 @@ export async function globalDelete(endPoint) {
     if(!response.ok) {
     throw new Error(`Error deleting data:${response.status}`);
     }
+    
 }
