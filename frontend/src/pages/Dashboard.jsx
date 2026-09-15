@@ -5,6 +5,7 @@ import PracticeLog from '../components/practice/PracticeLog';
 import ErrorMessage from '../components/shared/ErrorMessage';
 import Loading from '../components/shared/Loading';
 import PracticeTable from '../components/practice/PracticeTable';
+import { globalGet } from '../components/APIs/api';
 
 
 const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, practiceSession, setPracticeSession }) => {
@@ -74,12 +75,7 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
         
        const fetchPracticeData = async () => {
            try {
-               const response = await fetch('http://localhost:8080/api/practice-exercises');
-               if(!response.ok) {
-                   throw new Error(`Error collecting practice exercises! Status:${response.status}`);
-               }
-              
-               const data = await response.json();
+               const data = await globalGet("/practice-exercises");
                setPracticeData(data);
 
            } catch (err) {
