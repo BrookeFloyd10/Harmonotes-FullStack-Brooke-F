@@ -5,7 +5,7 @@ import PracticeLog from '../components/practice/PracticeLog';
 import ErrorMessage from '../components/shared/ErrorMessage';
 import Loading from '../components/shared/Loading';
 import PracticeTable from '../components/practice/PracticeTable';
-import { globalGet, globalPost } from '../components/APIs/api';
+import { globalGet, globalPost, globalPut } from '../components/APIs/api';
 
 
 const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, practiceSession, setPracticeSession }) => {
@@ -34,9 +34,10 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
             const newSession = await globalPost("/practice-sessions", practiceSession);
             setPracticeLog((prev) => [...prev,  newSession]);
         } else {
+            const updatedSession = await globalPut(`/practice-sessions/${editId}`, practiceSession);
             setPracticeLog((prev) => prev.map((session) => {
                 if (session.id === editId) {
-                    return practiceSession;
+                    return updatedSession;
                 } else {
                     return session;
                 }
