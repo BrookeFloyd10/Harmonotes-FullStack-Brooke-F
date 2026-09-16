@@ -90,8 +90,23 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
            }
        };
       
-       fetchPracticeData()
+       fetchPracticeData();
    }, []);
+
+
+   useEffect(() => {
+    const fetchPracticeSessions = async () => {
+            try {
+                const sessions = await globalGet("/practice-sessions");
+                setPracticeLog(sessions);
+            } catch (err) {
+                setError(err.message);
+                console.err('Fetch error: ', err);
+            }
+        };
+
+        fetchPracticeSessions();
+    }, []);
    
 
     if (isLoading) return <Loading />;
