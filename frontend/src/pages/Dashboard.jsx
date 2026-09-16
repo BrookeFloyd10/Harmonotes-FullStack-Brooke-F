@@ -5,7 +5,7 @@ import PracticeLog from '../components/practice/PracticeLog';
 import ErrorMessage from '../components/shared/ErrorMessage';
 import Loading from '../components/shared/Loading';
 import PracticeTable from '../components/practice/PracticeTable';
-import { globalGet, globalPost, globalPut } from '../components/APIs/api';
+import { globalDelete, globalGet, globalPost, globalPut } from '../components/APIs/api';
 
 
 const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, practiceSession, setPracticeSession }) => {
@@ -53,7 +53,8 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
         setEditId(session.id);
     };
    
-    const handleDelete = (id) => {
+    const handleDelete = async (id) => {
+        await globalDelete(`/practice-sessions/${id}`);
         setPracticeLog((prev) => prev.filter((entry) => entry.id !== id));
     };
     
