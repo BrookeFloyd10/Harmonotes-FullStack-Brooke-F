@@ -12,8 +12,8 @@ const PracticeLog = ({ practiceSession, handleChange, handleSubmit, error }) => 
                 <FormField label="Practice Focus"
                             as="textarea"
                             id="session-focus"
-                            name="focus"
-                            value={practiceSession.focus || ""}
+                            name="sessionFocus"
+                            value={practiceSession.sessionFocus || ""}
                             onChange={handleChange}
                             rows={2}
                             cols={30}
@@ -21,8 +21,8 @@ const PracticeLog = ({ practiceSession, handleChange, handleSubmit, error }) => 
                 <FormField label="Practice Length"
                             as="textarea"
                             id="session-time"
-                            name="time"
-                            value={practiceSession.time || ""}
+                            name="sessionDuration"
+                            value={practiceSession.sessionDuration || ""}
                             onChange={handleChange}
                             rows={1}
                             cols={30}
@@ -30,8 +30,8 @@ const PracticeLog = ({ practiceSession, handleChange, handleSubmit, error }) => 
                 <FormField label="Triumphs & Challenges"
                             as="textarea"
                             id="practice-outcome"
-                            name="outcome"
-                            value={practiceSession.outcome || ""}
+                            name="sessionTriumphsChallenges"
+                            value={practiceSession.sessionTriumphsChallenges || ""}
                             onChange={handleChange}
                             rows={4}
                             cols={30}

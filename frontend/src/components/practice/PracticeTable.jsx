@@ -24,9 +24,9 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
                     {/* maps over sessions logged by user to populate the table */}
                     {sessions.map((session) => (
                         <tr key={session.id}>
-                        <td>{session.focus}</td>
-                        <td>{session.time}</td>
-                        <td>{session.outcome}</td>
+                        <td>{session.sessionFocus}</td>
+                        <td>{session.sessionDuration}</td>
+                        <td>{session.sessionTriumphsChallenges}</td>
                         <td><Button id={`edit-btn-${session.id}`}
                                     type="button"
                                     className="edit-btn"
