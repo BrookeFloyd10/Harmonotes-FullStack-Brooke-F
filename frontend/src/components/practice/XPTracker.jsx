@@ -6,7 +6,7 @@ function XPTracker({practiceData}) {
       return exercise.completed
     });
     const dailyXp = completedTasks.reduce((total, exercise) => {
-        return total + exercise.xp
+        return total + exercise.xpValue
     }, 0);
 
     return (
