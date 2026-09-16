@@ -59,12 +59,16 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
     };
     
 
-    const handleToggleComplete = (id) => {
+    const handleToggleComplete = async (id) => {
+        const exercise = practiceData.find((item) => item.id === id);
+        
+        const updatedExercise = {
+           ...exercise, completed: !exercise.completed };
+
+        const savedExercise = await globalPut(`/practice-exercises/${id}`, updatedExercise);
         setPracticeData((prevData) => 
-            prevData.map((exercise) => 
-                exercise.id === id
-                    ? {...exercise, completed: !exercise.completed }
-                    : exercise
+            prevData.map((item) => 
+                item.id === id ? savedExercise : item
         )
       );
     };
