@@ -13,6 +13,7 @@ public class PracticeExercise {
     private int xpValue;
     private String url;
     private String instrument;
+    private boolean completed;
 
     public PracticeExercise() {
 
@@ -64,6 +65,14 @@ public class PracticeExercise {
 
     public void setInstrument(String instrument) {
         this.instrument = instrument;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 }
 
