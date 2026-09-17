@@ -3,6 +3,7 @@ package com.harmonotesapp.backend.models;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name="practice_sessions")
     public class PracticeSession {
         @Id
         @GeneratedValue(strategy=GenerationType.IDENTITY)
