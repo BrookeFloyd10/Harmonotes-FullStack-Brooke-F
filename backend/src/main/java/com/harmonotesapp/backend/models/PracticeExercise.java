@@ -9,9 +9,10 @@ public class PracticeExercise {
     @GeneratedValue(strategy= GenerationType.IDENTITY )
     private Long id;
     private String title;
+    private String description;
     private String difficulty;
     private int xpValue;
-    private String url;
+    private String videoLink;
     private String instrument;
     private boolean completed;
 
@@ -35,6 +36,14 @@ public class PracticeExercise {
         this.title = title;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getDifficulty() {
         return difficulty;
     }
@@ -51,12 +60,12 @@ public class PracticeExercise {
         this.xpValue = xpValue;
     }
 
-    public String getUrl() {
-        return url;
+    public String getVideoLink() {
+        return videoLink;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setVideoLink(String vidoeLink) {
+        this.videoLink = videoLink;
     }
 
     public String getInstrument() {
