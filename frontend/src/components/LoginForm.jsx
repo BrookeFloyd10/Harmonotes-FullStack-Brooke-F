@@ -12,8 +12,6 @@ const LoginForm = () => {
     
     const [ isSubmitted, setIsSubmitted ]=useState(false);
     
-        const isAnyFieldEmpty = Object.values(loginData).some(value => !value.trim());
-    
     const [ errors, setErrors ]=useState({});
     
     const validation = () => {
@@ -61,7 +59,6 @@ const LoginForm = () => {
                                 name="email"
                                 value={loginData.email}
                                 onChange={handleChange}
-                                placeholder={"youremail@example.com"}
                                 required
                                 error={errors.email}/>
                         <FormField  label="Password:"
@@ -70,10 +67,9 @@ const LoginForm = () => {
                                 name="password"
                                 value={loginData.password}
                                 onChange={handleChange}
-                                placeholder={"Enter your password"}
                                 error={errors.password}
                                 required/>
-                        <Button id="submit-btn" type="submit" disabled={isAnyFieldEmpty} className="submit-btn" label="Login!"/>
+                        <Button id="submit-btn" type="submit" className="submit-btn" label="Login!"/>
                     </form>
                 </div>
             );
