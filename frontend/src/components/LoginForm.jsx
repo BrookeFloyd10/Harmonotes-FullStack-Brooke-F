@@ -5,12 +5,53 @@ import '../utils/validators';
 
 const LoginForm = () => {
     
+    const [loginData, setLoginData]=useState({
+            email: "",
+            password: ""
+            });
+    
+    const [ isSubmitted, setIsSubmitted ]=useState(false);
+    
         const isAnyFieldEmpty = Object.values(loginData).some(value => !value.trim());
-
+    
+    const [ errors, setErrors ]=useState({});
+    
+    const validation = () => {
+        const newErrors = {};
+            if (!loginData.email)  newErrors.email = "Please provide your email";
+            if (!loginData.password) newErrors.password = "Please provide your password";
+            return newErrors;
+     }
+    
+    const handleChange = (ev) => {
+        const {name, value} = ev.target;
+        setLoginData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+    
+        const handleSubmit = (ev) => {
+            ev.preventDefault();
+            const validationErrors = validation();
+            if(Object.keys(validationErrors).length > 0) {
+                setErrors(validationErrors);
+                return;
+            }
+            setErrors({});
+            setLoginData({email: "", password: ""});
+            setIsSubmitted(true);
+        };
     
             return(
-                <div className="login-form">
+                <div className="login-signup-form">
                     <hi>Welcome!</hi>
+
+                        {isSubmitted && (
+                        <div className="success-message">
+        
+                        </div>
+                        )}
 
 
                     <form onSubmit={handleSubmit} noValidate>
@@ -35,9 +76,7 @@ const LoginForm = () => {
                         <Button id="submit-btn" type="submit" disabled={isAnyFieldEmpty} className="submit-btn" label="Login!"/>
                     </form>
                 </div>
-            )
+            );
+        }
 
-           
-}
-
-export default LoginForm
+        export default LoginForm;
