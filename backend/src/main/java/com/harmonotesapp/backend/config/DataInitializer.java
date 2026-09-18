@@ -1,5 +1,6 @@
 package com.harmonotesapp.backend.config;
 
+import com.harmonotesapp.backend.models.Student;
 import com.harmonotesapp.backend.models.User;
 import com.harmonotesapp.backend.repositories.StudentRepository;
 import com.harmonotesapp.backend.repositories.UserRepository;
@@ -28,6 +29,10 @@ public class DataInitializer implements CommandLineRunner {
             user.setPassword("K3ys&Ch0rds");
             user.setRole("student");
             userRepository.save(user);
+
+            Student student = new Student();
+            student.setUser(user);
+            studentRepository.save(student);
         }
     }
 }
