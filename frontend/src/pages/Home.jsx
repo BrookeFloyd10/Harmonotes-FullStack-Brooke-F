@@ -1,6 +1,6 @@
 import homepage from "../assets/images/homepage.svg";
 import "../components/LoginForm"
-import LoginSignupForm from "../components/LoginForm";
+import LoginForm from "../components/LoginForm";
 
 const Home = () => {
     return(
