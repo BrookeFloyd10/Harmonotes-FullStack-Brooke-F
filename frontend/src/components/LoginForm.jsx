@@ -59,8 +59,8 @@ const LoginForm = () => {
                                 name="email"
                                 value={loginData.email}
                                 onChange={handleChange}
-                                required
-                                error={errors.email}/>
+                                error={errors.email}
+                                required/>
                         <FormField  label="Password:"
                                 id="password"
                                 type="text"
