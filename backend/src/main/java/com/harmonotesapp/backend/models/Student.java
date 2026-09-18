@@ -11,8 +11,10 @@ public class Student {
     private int totalXp;
     private int dailyXp;
 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @OneToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="user_id", unique=true)
     private User user;
+
 
     public Long getId() {
         return id;
