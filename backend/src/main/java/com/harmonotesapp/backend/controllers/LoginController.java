@@ -1,5 +1,6 @@
 package com.harmonotesapp.backend.controllers;
 
+import com.harmonotesapp.backend.dto.LoginRequestDTO;
 import com.harmonotesapp.backend.models.User;
 import com.harmonotesapp.backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,8 @@ public class LoginController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping
-    public User getUser(String emailAddress){
-        return userRepository.findUserByEmailAddress(emailAddress);
+    @PostMapping
+    public User getUser(@RequestBody LoginRequestDTO loginRequestDTO) {
+        return userRepository.findUserByEmailAddress(loginRequestDTO.getEmailAddress());
     }
 }
