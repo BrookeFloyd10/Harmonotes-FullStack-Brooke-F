@@ -22,7 +22,7 @@ const NavBar = ({ loggedInUser, setLoggedInUser }) =>{
                 <li><Link to="/dashboard"><img src={sixteenthNote} alt= "16th note icon link to dashboard" />Dashboard</Link></li>
                 <li><Link to="/library"><img src={quarterNote} alt= "quarter note icon link to library" />Library</Link></li>
                 <li><Link to="/about"><img src={halfNote} alt= "half note icon link to about page" />About</Link></li>
-                <li><Button id="logout-btn" type="button" icon={<img src={REstNote} alt="rest note icon as logout button" />} label="Logout" onClick={handleLogOut} /></li>
+                <li><Button className="logout-btn" id="logout-btn" type="button" icon={<img src={REstNote} alt="rest note icon as logout button" />} label="Logout" onClick={handleLogOut} /></li>
                 </>
             ) : (
                 <>
