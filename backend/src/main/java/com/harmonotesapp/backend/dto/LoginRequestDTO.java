@@ -4,6 +4,9 @@ public class LoginRequestDTO {
     private String emailAddress;
     private String password;
 
+public LoginRequestDTO() {
+}
+
     public String getEmailAddress() {
         return emailAddress;
     }
