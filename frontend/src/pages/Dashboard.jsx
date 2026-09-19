@@ -105,7 +105,7 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
                 setPracticeLog(sessions);
             } catch (err) {
                 setError(err.message);
-                console.err('Fetch error: ', err);
+                console.error('Fetch error: ', err);
             }
         };
 
