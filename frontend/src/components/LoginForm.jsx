@@ -5,7 +5,7 @@ import Button from './shared/Button';
 import '../utils/validators';
 import { globalPost } from './APIs/api';
 
-const LoginForm = () => {
+const LoginForm = ({ setLoggedInUser }) => {
     
     const navigate = useNavigate();
 
@@ -14,9 +14,6 @@ const LoginForm = () => {
             password: ""
             });
 
-    const [loggedInUser, setLoggedInUser]=useState(null);
-
-    
     const [errors, setErrors]=useState({});
     
     const validation = () => {
@@ -82,7 +79,7 @@ const LoginForm = () => {
                                 value={loginData.password}
                                 onChange={handleChange}
                                 error={errors.password}
-                                placeholder={"K3ys&Chrds"}
+                                placeholder={"K3ys&Ch0rds"}
                                 required/>
                         <Button id="submit-btn" type="submit" className="submit-btn" label="Login!"/>
                     </form>

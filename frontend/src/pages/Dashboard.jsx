@@ -8,7 +8,7 @@ import PracticeTable from '../components/practice/PracticeTable';
 import { globalDelete, globalGet, globalPost, globalPut } from '../components/APIs/api';
 
 
-const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, practiceSession, setPracticeSession }) => {
+const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, practiceSession, setPracticeSession, loggedInUser }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     const [formError, setFormError] = useState("");
@@ -120,7 +120,7 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
         <>
         <div className="dashboard-top">
             <div className="dashboard-left">
-                <h2>Welcome Back, Gabe!</h2>
+                <h2>{loggedInUser ? `Welcome Back, ${loggedInUser.firstName}!` : "Welcome Back!"}</h2>
                    <XPTracker practiceData={practiceData} />
             </div>
 
