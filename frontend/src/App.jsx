@@ -20,7 +20,9 @@ const App= () => {
 
   return (
     <div className="body-container"> 
-      <Header loggedInUser={loggedInUser} />
+      <Header loggedInUser={loggedInUser}
+              setLoggedInUser={setLoggedInUser}
+              />
       
       <main>
           <Routes>

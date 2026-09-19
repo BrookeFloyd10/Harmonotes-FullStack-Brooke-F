@@ -4,8 +4,12 @@ import eighthNote from '../../assets/images/eighthNote.svg';
 import sixteenthNote from '../../assets/images/sixteenthNote.svg';
 import quarterNote from '../../assets/images/quarterNote.svg';
 import halfNote from '../../assets/images/halfNote.svg';
+import Button from '../shared/Button';
 
-const NavBar = ({ loggedInUser }) =>{
+const NavBar = ({ loggedInUser, setLoggedInUser }) =>{
+    const handleLogOut = () => {
+        setLoggedInUser(null);
+    }
     return(
         <nav className='nav-bar'>
         <ul>
@@ -16,6 +20,7 @@ const NavBar = ({ loggedInUser }) =>{
                 <li><Link to="/dashboard"><img src={sixteenthNote} alt= "16th note icon link to dashboard" />Dashboard</Link></li>
                 <li><Link to="/library"><img src={quarterNote} alt= "quarter note icon link to library" />Library</Link></li>
                 <li><Link to="/about"><img src={halfNote} alt= "half note icon link to about page" />About</Link></li>
+                <li><Button id="logout-btn" type="button" label="Logout" onClick={handleLogOut} /></li>
                 </>
             ) : (
                 <>
