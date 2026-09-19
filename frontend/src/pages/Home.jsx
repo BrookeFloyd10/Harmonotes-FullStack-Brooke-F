@@ -2,7 +2,7 @@ import homepage from "../assets/images/homepage.svg";
 import "../components/LoginForm"
 import LoginForm from "../components/LoginForm";
 
-const Home = () => {
+const Home = ({ setLoggedInUser }) => {
     return(
         <>
             <div className="home-page">
@@ -10,7 +10,7 @@ const Home = () => {
                 <p>Where practice meets progress.</p>
             </div>
 
-            <LoginForm />
+            <LoginForm setLoggedInUser={setLoggedInUser} />
         </>
     )
 }

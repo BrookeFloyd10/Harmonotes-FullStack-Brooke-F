@@ -16,16 +16,20 @@ const App= () => {
   const [practiceData, setPracticeData] = useState([]);
   const [practiceLog, setPracticeLog] = useState([]);
   const [practiceSession, setPracticeSession] = useState({});
+  const [loggedInUser, setLoggedInUser] = useState(null);
+
   return (
     <div className="body-container"> 
       <Header />
       
       <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home setLoggedInUser={setLoggedInUser} />} />
             <Route path="/about" element={<About />} />
             <Route path="/library" element={<Library />} />
-            <Route path="/dashboard" element={<Dashboard practiceData={practiceData}
+            <Route path="/dashboard" element={<Dashboard  
+                                                          loggedInUser={loggedInUser}
+                                                          practiceData={practiceData}
                                                           practiceLog={practiceLog}
                                                           practiceSession={practiceSession}
                                                           setPracticeData={setPracticeData}

@@ -5,7 +5,7 @@ import Button from './shared/Button';
 import '../utils/validators';
 import { globalPost } from './APIs/api';
 
-const LoginForm = () => {
+const LoginForm = ({ setLoggedInUser }) => {
     
     const navigate = useNavigate();
 
@@ -14,9 +14,6 @@ const LoginForm = () => {
             password: ""
             });
 
-    const [loggedInUser, setLoggedInUser]=useState(null);
-
-    
     const [errors, setErrors]=useState({});
     
     const validation = () => {
