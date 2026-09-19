@@ -82,7 +82,7 @@ const LoginForm = () => {
                                 value={loginData.password}
                                 onChange={handleChange}
                                 error={errors.password}
-                                placeholder={"K3ys&Chrds"}
+                                placeholder={"K3ys&Ch0rds"}
                                 required/>
                         <Button id="submit-btn" type="submit" className="submit-btn" label="Login!"/>
                     </form>
