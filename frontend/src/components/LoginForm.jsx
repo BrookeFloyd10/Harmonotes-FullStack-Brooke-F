@@ -2,24 +2,27 @@ import { useState } from 'react';
 import FormField from './shared/FormField';
 import Button from './shared/Button';
 import '../utils/validators';
+import { globalPost } from './APIs/api';
 
 const LoginForm = () => {
     
     const [loginData, setLoginData]=useState({
-            email: "",
+            emailAddress: "",
             password: ""
             });
+
+    const [loggedInUser, setLoggedInUser]=useState(null);
+
+    const [isSubmitted, setIsSubmitted]=useState(false);
     
-    const [ isSubmitted, setIsSubmitted ]=useState(false);
-    
-    const [ errors, setErrors ]=useState({});
+    const [errors, setErrors]=useState({});
     
     const validation = () => {
         const newErrors = {};
-            if (!loginData.email)  newErrors.email = "Please provide your email";
+            if (!loginData.emailAddress)  newErrors.emailAddress = "Please provide your email";
             if (!loginData.password) newErrors.password = "Please provide your password";
             return newErrors;
-     }
+     };
     
     const handleChange = (ev) => {
         const {name, value} = ev.target;
@@ -29,26 +32,39 @@ const LoginForm = () => {
         }));
     };
     
-        const handleSubmit = (ev) => {
+        const handleSubmit = async (ev) => {
             ev.preventDefault();
+
             const validationErrors = validation();
             if(Object.keys(validationErrors).length > 0) {
                 setErrors(validationErrors);
                 return;
             }
-            setErrors({});
-            setLoginData({email: "", password: ""});
-            setIsSubmitted(true);
-        };
+
+        try {
+            const loggedInUser = await globalPost("/api/login", loginData);
+            setIsSubmitted(true)
+            setLoggedInUser(loggedInUser);
+            setLoginData({emailAddress: "", password: ""});
+        } catch (err) {
+            setErrors({loginErrors : err.message});
+        }
+    }
     
             return(
-                <div className="login-signup-form">
-                    <hi>Welcome!</hi>
+                <div className="login-form">
+                    <h1>Welcome!</h1>
 
                         {isSubmitted && (
                         <div className="success-message">
-        
+                     {/*ToDo route to dashboard upon succcsful fetch/log in */}
                         </div>
+                        )}
+
+                        {errors.loginErrors && (
+                            <div className="login-error-message">
+                                {errors.loginErrors}
+                                </div>
                         )}
 
 
@@ -56,14 +72,14 @@ const LoginForm = () => {
                         <FormField  label="Email:"
                                 id="email"
                                 type="email"
-                                name="email"
-                                value={loginData.email}
+                                name="emailAddress"
+                                value={loginData.emailAddress}
                                 onChange={handleChange}
-                                error={errors.email}
+                                error={errors.emailAddress}
                                 required/>
                         <FormField  label="Password:"
                                 id="password"
-                                type="text"
+                                type="password"
                                 name="password"
                                 value={loginData.password}
                                 onChange={handleChange}
