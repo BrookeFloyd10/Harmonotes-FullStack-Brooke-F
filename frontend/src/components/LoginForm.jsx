@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import FormField from './shared/FormField';
 import Button from './shared/Button';
 import '../utils/validators';
@@ -6,6 +7,8 @@ import { globalPost } from './APIs/api';
 
 const LoginForm = () => {
     
+    const navigate = useNavigate();
+
     const [loginData, setLoginData]=useState({
             emailAddress: "",
             password: ""
@@ -13,7 +16,6 @@ const LoginForm = () => {
 
     const [loggedInUser, setLoggedInUser]=useState(null);
 
-    const [isSubmitted, setIsSubmitted]=useState(false);
     
     const [errors, setErrors]=useState({});
     
@@ -40,26 +42,21 @@ const LoginForm = () => {
                 setErrors(validationErrors);
                 return;
             }
-
-        try {
-            const loggedInUser = await globalPost("/api/login", loginData);
-            setIsSubmitted(true)
-            setLoggedInUser(loggedInUser);
-            setLoginData({emailAddress: "", password: ""});
+            
+            try {
+                const loggedInUser = await globalPost("/login", loginData);
+                setLoggedInUser(loggedInUser);
+                setLoginData({emailAddress: "", password: ""});
+                navigate("/dashboard");
         } catch (err) {
             setErrors({loginErrors : err.message});
         }
+
     }
     
             return(
                 <div className="login-form">
                     <h1>Welcome!</h1>
-
-                        {isSubmitted && (
-                        <div className="success-message">
-                     {/*ToDo route to dashboard upon succcsful fetch/log in */}
-                        </div>
-                        )}
 
                         {errors.loginErrors && (
                             <div className="login-error-message">
@@ -76,6 +73,7 @@ const LoginForm = () => {
                                 value={loginData.emailAddress}
                                 onChange={handleChange}
                                 error={errors.emailAddress}
+                                placeholder={"ChordRunner@gmail.com"}
                                 required/>
                         <FormField  label="Password:"
                                 id="password"
@@ -84,6 +82,7 @@ const LoginForm = () => {
                                 value={loginData.password}
                                 onChange={handleChange}
                                 error={errors.password}
+                                placeholder={"K3ys&Chrds"}
                                 required/>
                         <Button id="submit-btn" type="submit" className="submit-btn" label="Login!"/>
                     </form>
