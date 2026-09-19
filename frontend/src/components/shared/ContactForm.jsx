@@ -3,7 +3,7 @@ import FormField from "./FormField";
 import Button from "./Button";
 import { isValidEmail } from "../../utils/validators";
 
-function ContactForm() {
+const ContactForm = () => {
     const [formData, setFormData]=useState({
         name: "",
         email: "",

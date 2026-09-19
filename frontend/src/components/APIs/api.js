@@ -1,7 +1,7 @@
 
 const apiBaseUrl = "http://localhost:8080/api";
 
-export async function globalGet(endPoint) {
+export const globalGet = async (endPoint) => {
     const response = await fetch(`${apiBaseUrl}${endPoint}`)
 
     if(!response.ok) {
@@ -10,7 +10,7 @@ export async function globalGet(endPoint) {
     return response.json();
 }
 
-export async function globalPost(endPoint, postBody) {
+export const globalPost = async (endPoint, postBody) => {
     const response = await fetch(`${apiBaseUrl}${endPoint}`, {
         method: "POST",
         headers: {
@@ -25,7 +25,7 @@ export async function globalPost(endPoint, postBody) {
     return response.json();
 }
 
-export async function globalPut(endPoint, postBody) {
+export const globalPut = async (endPoint, postBody) => {
     const response = await fetch(`${apiBaseUrl}${endPoint}`, {
         method: "PUT",
         headers: {
@@ -40,7 +40,7 @@ export async function globalPut(endPoint, postBody) {
     return response.json();
 }
 
-export async function globalDelete(endPoint) {
+export const globalDelete = async (endPoint)=>  {
     const response = await fetch(`${apiBaseUrl}${endPoint}`, {
         method: "DELETE"
     });
