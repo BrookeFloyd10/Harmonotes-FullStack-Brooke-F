@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route } from 'react-router'
+import { Routes, Route, Navigate } from 'react-router'
 import Header from './components/layout/Header'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -26,15 +26,26 @@ const App= () => {
           <Routes>
             <Route path="/" element={<Home setLoggedInUser={setLoggedInUser} />} />
             <Route path="/about" element={<About />} />
-            <Route path="/library" element={<Library />} />
-            <Route path="/dashboard" element={<Dashboard  
-                                                          loggedInUser={loggedInUser}
-                                                          practiceData={practiceData}
-                                                          practiceLog={practiceLog}
-                                                          practiceSession={practiceSession}
-                                                          setPracticeData={setPracticeData}
-                                                          setPracticeLog={setPracticeLog}
-                                                          setPracticeSession={setPracticeSession}/>} />
+            <Route path="/library" element=
+                                        {loggedInUser ? (
+                                            <Library />
+                                    ) : ( <Navigate to="/" />)
+                                  } 
+                                />
+            <Route path="/dashboard" element=
+                                        {loggedInUser ? (
+                                            <Dashboard  
+                                            loggedInUser={loggedInUser}
+                                            practiceData={practiceData}
+                                            practiceLog={practiceLog}
+                                            practiceSession={practiceSession}
+                                            setPracticeData={setPracticeData}
+                                            setPracticeLog={setPracticeLog}
+                                            setPracticeSession={setPracticeSession}
+                                          />
+                                      ) : (<Navigate to="/" />)
+                                    }
+                                  />
           </Routes>
       </main>
       
