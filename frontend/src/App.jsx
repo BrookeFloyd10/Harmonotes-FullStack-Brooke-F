@@ -20,7 +20,7 @@ const App= () => {
 
   return (
     <div className="body-container"> 
-      <Header />
+      <Header loggedInUser={loggedInUser} />
       
       <main>
           <Routes>
