@@ -23,6 +23,11 @@ public class StudentController {
     return studentRepository.findById(id).orElse(null);
     }
 
+@GetMapping("/user/{userId}")
+    public Student getStudentByUserId(@PathVariable Long userId) {
+    return studentRepository.findByUserId(userId).orElse(null);
+}
+
 @PostMapping()
     public Student createStudent(@RequestBody Student student) {
     return studentRepository.save(student);
