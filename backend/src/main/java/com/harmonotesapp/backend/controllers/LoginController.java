@@ -4,7 +4,9 @@ import com.harmonotesapp.backend.dto.LoginRequestDTO;
 import com.harmonotesapp.backend.models.User;
 import com.harmonotesapp.backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 @CrossOrigin
 @RestController
@@ -15,6 +17,11 @@ public class LoginController {
 
     @PostMapping
     public User getUser(@RequestBody LoginRequestDTO loginRequestDTO) {
-        return userRepository.findUserByEmailAddress(loginRequestDTO.getEmailAddress());
+        User user = userRepository.findUserByEmailAddress(loginRequestDTO.getEmailAddress());
+            if (user != null && user.getPassword().equals(loginRequestDTO.getPassword())) {
+                return user;
+            } else {
+                throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid email or password");
+            }
+        }
     }
-}
