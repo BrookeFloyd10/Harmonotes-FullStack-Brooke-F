@@ -120,7 +120,7 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
         <>
         <div className="dashboard-top">
             <div className="dashboard-left">
-                <h2>Welcome Back, Gabe!</h2>
+                <h2>{loggedInUser ? `Welcome Back, ${loggedInUser.firstName}!` : "Welcome Back!"}</h2>
                    <XPTracker practiceData={practiceData} />
             </div>
 
