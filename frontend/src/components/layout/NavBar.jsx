@@ -8,6 +8,7 @@ import Button from '../shared/Button';
 
 const NavBar = ({ loggedInUser, setLoggedInUser }) =>{
     const handleLogOut = () => {
+        localStorage.removeItem("loggedInUser");
         setLoggedInUser(null);
     }
     return(
