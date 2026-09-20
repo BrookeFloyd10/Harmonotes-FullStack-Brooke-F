@@ -10,6 +10,7 @@ public class LibraryItem {
     private Long id;
     private String title;
     private String artist;
+    private String type;
     private String instrument;
     private String difficulty;
     private String file;
@@ -41,6 +42,14 @@ public class LibraryItem {
 
     public void setArtist(String artist) {
         this.artist = artist;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getInstrument() {

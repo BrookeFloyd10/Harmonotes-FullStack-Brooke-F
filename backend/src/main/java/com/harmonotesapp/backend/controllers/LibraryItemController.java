@@ -15,9 +15,13 @@ public class LibraryItemController {
     @Autowired
     private LibraryItemRepository libraryItemRepository;
 
+    // takes care of filtering by instrument by adding it to the URL and if all is selected it adds nothing and defaults to find all.
     @GetMapping()
-    public List<LibraryItem> getAllLibraryItems() {
-     return libraryItemRepository.findAll();
+    public List<LibraryItem> getAllLibraryItems(@RequestParam(required=false) String instrument) {
+        if(instrument !=null && !instrument.isBlank()) {
+            return libraryItemRepository.findByInstrumentContaining(instrument);
+        }
+        return libraryItemRepository.findAll();
     }
 
     @GetMapping("/{id}")

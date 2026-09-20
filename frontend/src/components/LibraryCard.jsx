@@ -14,14 +14,13 @@ const LibraryCard = ({ item }) => {
                     : type === "reference" ? "View Reference" 
                     : type === "exercise" ? "View Exercise"
                     : " "} </a>
-                    )}
-                    {audio.length > 0 && (
+            )}
+
+            {audio && (
                 <div>
                     <p>Play along!</p>
-                    {audio.map((audioClip) => (
-                        <a key={audioClip.file} href={audioClip.file} target="_blank" rel="noopener noreferrer">
-                            {audioClip.label}</a>
-                   ))}
+                    <a href={audio} target="_blank" rel="noopener noreferrer">
+                        Listen</a>
                 </div>
             )}
         </article>
