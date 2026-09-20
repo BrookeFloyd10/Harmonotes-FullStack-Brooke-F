@@ -1,5 +1,4 @@
 import homepage from "../assets/images/homepage.svg";
-import "../components/LoginForm"
 import LoginForm from "../components/LoginForm";
 
 const Home = ({ setLoggedInUser }) => {

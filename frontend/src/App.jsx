@@ -16,11 +16,13 @@ const App= () => {
   const [practiceData, setPracticeData] = useState([]);
   const [practiceLog, setPracticeLog] = useState([]);
   const [practiceSession, setPracticeSession] = useState({});
-  const [loggedInUser, setLoggedInUser] = useState(null);
-
+  const [loggedInUser, setLoggedInUser] = useState(JSON.parse(localStorage.getItem("loggedInUser")) || null);
+  
   return (
     <div className="body-container"> 
-      <Header />
+      <Header loggedInUser={loggedInUser}
+              setLoggedInUser={setLoggedInUser}
+              />
       
       <main>
           <Routes>

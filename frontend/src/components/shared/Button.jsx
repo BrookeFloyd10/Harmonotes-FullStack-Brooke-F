@@ -1,4 +1,4 @@
-const Button =({ id, type, disabled, label, className, onClick}) => {
+const Button =({ id, type, disabled, icon, label, className, onClick}) => {
     return ( 
         <button
             id={id}
@@ -6,6 +6,7 @@ const Button =({ id, type, disabled, label, className, onClick}) => {
             disabled={disabled}
             className={className}
             onClick={onClick}>
+            {icon}
             {label}
         </button>
     );

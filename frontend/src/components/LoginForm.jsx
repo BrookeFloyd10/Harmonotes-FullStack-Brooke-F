@@ -43,13 +43,14 @@ const LoginForm = ({ setLoggedInUser }) => {
             try {
                 const loggedInUser = await globalPost("/login", loginData);
                 setLoggedInUser(loggedInUser);
+                localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
                 setLoginData({emailAddress: "", password: ""});
                 navigate("/dashboard");
-        } catch (err) {
+            } catch (err) {
             setErrors({loginErrors : err.message});
-        }
+            }
 
-    }
+        }
     
             return(
                 <div className="login-form">
