@@ -64,7 +64,7 @@ public class PracticeExercise {
         return videoLink;
     }
 
-    public void setVideoLink(String vidoeLink) {
+    public void setVideoLink(String videoLink) {
         this.videoLink = videoLink;
     }
 
