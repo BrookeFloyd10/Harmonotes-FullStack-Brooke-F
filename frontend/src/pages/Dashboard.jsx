@@ -24,28 +24,29 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
     const handleSubmit = async (ev) => {
         ev.preventDefault();
 
-        const {sessionFocus, sessionDuration, sessionTriumphsChallenges} = practiceSession;
-            if (!sessionFocus || !sessionDuration || !sessionTriumphsChallenges) {
+        const { sessionFocus, sessionDuration, sessionTriumphsChallenges } = practiceSession;
+            if (!sessionFocus.trim() || !sessionDuration.trim() || !sessionTriumphsChallenges.trim()) {
                 setFormError("Complete all fields to log session")
                 return;
             }
-
-        if (editId === null) { 
-            const newSession = await globalPost("/practice-sessions", practiceSession);
-            setPracticeLog((prev) => [...prev,  newSession]);
-        } else {
-            const updatedSession = await globalPut(`/practice-sessions/${editId}`, practiceSession);
-            setPracticeLog((prev) => prev.map((session) => {
-                if (session.id === editId) {
-                    return updatedSession;
-                } else {
-                    return session;
-                }
-            }));
+        try {
+            if (editId === null) { 
+                const newSession = await globalPost("/practice-sessions", practiceSession);
+                setPracticeLog((prev) => [...prev,  newSession]);
+            } else {
+                const updatedSession = await globalPut(`/practice-sessions/${editId}`, practiceSession);
+                setPracticeLog((prev) => prev.map((session) => 
+                    session.id === editId ? updatedSession : session
+            ));
         }
+
         setPracticeSession({});
         setEditId(null);
         setFormError("");
+    } catch (err) {
+        setFormError("Something went wrong, session not saved. Please try again.");
+        console.error("Error saving:", err);
+    }
     };
 
     const handleEdit =  (session) => {
@@ -54,24 +55,33 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
     };
    
     const handleDelete = async (id) => {
-        await globalDelete(`/practice-sessions/${id}`);
-        setPracticeLog((prev) => prev.filter((entry) => entry.id !== id));
+        try {
+            await globalDelete(`/practice-sessions/${id}`);
+            setPracticeLog((prev) => prev.filter((entry) => entry.id !== id));
+        } catch (err) {
+            setError(err.message);
+            console.error("Error Deleting: ", err);
+        }    
     };
     
 
     const handleToggleComplete = async (id) => {
-        const exercise = practiceData.find((item) => item.id === id);
-        
-        const updatedExercise = {
-           ...exercise, completed: !exercise.completed };
-
-        const savedExercise = await globalPut(`/practice-exercises/${id}`, updatedExercise);
-        setPracticeData((prevData) => 
-            prevData.map((item) => 
-                item.id === id ? savedExercise : item
-        )
-      );
-    };
+        try {
+            const exercise = practiceData.find((item) => item.id === id);
+            
+            
+            const updatedExercise = {
+                ...exercise, completed: !exercise.completed };
+                
+                const savedExercise = await globalPut(`/practice-exercises/${id}`, updatedExercise);
+                setPracticeData((prevData) => 
+                    prevData.map((item) => (item.id === id ? savedExercise : item))
+            );
+        } catch (err) {
+            setError(err.message);
+            console.error("Checkbox error: ", err);
+    }
+};
 
     
      useEffect(() => {
@@ -112,7 +122,6 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
         fetchPracticeSessions();
     }, []);
    
-
     if (isLoading) return <Loading />;
     if (error) return <ErrorMessage message={error} />;
     
@@ -157,6 +166,7 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
                 <PracticeLog  practiceSession={practiceSession}
                         handleChange={handleChange}
                         handleSubmit={handleSubmit}
+                        editId={editId}
                         error={formError}/>
             </aside> 
         </div>
