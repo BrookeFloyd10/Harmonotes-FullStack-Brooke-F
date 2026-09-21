@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import FormField from './shared/FormField';
 import Button from './shared/Button';
-import '../utils/validators';
 import { globalPost } from './APIs/api';
 
 const LoginForm = ({ setLoggedInUser }) => {
@@ -49,9 +48,7 @@ const LoginForm = ({ setLoggedInUser }) => {
             } catch (err) {
             setErrors({loginErrors : err.message});
             }
-
         }
-    
             return(
                 <div className="login-form">
                     <h1>Welcome!</h1>
