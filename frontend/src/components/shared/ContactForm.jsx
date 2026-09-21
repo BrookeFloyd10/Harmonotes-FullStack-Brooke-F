@@ -2,6 +2,7 @@ import { useState } from "react";
 import FormField from "./FormField";
 import Button from "./Button";
 import { isValidEmail } from "../../utils/validators";
+import { globalPost } from "../APIs/api";
 
 const ContactForm = () => {
     const [formData, setFormData]=useState({
@@ -31,16 +32,22 @@ const ContactForm = () => {
         }));
     };
 
-    const handleSubmit = (ev) => {
+    const handleSubmit = async (ev) => {
         ev.preventDefault();
         const validationErrors = validation();
         if(Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
             return;
         }
-        setErrors({});
-        setFormData({name: "", email: "", message: ""});
-        setIsSubmitted(true);
+        try {
+            await globalPost("/contact-messages", formData);
+            setErrors({});
+            setFormData({name: "", email: "", message: ""});
+            setIsSubmitted(true);
+        } catch (err) {
+            setErrors({ submitError: "Something went wrong. Message was not submitted, please try again." })
+            console.error("Contact form not submitted properly. Error:", err);
+        }
     };
         return (
             <div className="contact-form">
@@ -51,6 +58,10 @@ const ContactForm = () => {
                     <p>Thank you! Someone will reach out shortly!</p>
                     <Button id="dismiss-btn" type="button" className="dismiss-btn" onClick={() => setIsSubmitted(false)} label="OK" />
                   </div>
+                )}
+
+                {errors.submitError && (
+                    <p className="error-message">{errors.submitError}</p>
                 )}
 
                 <form onSubmit={handleSubmit} noValidate>
