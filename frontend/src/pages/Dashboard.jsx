@@ -24,7 +24,7 @@ const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, 
     const handleSubmit = async (ev) => {
         ev.preventDefault();
 
-        const { sessionFocus, sessionDuration, sessionTriumphsChallenges } = practiceSession;
+        const { sessionFocus = "", sessionDuration = "", sessionTriumphsChallenges = "" } = practiceSession;
             if (!sessionFocus.trim() || !sessionDuration.trim() || !sessionTriumphsChallenges.trim()) {
                 setFormError("Complete all fields to log session")
                 return;
