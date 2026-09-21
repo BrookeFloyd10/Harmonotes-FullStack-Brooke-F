@@ -12,13 +12,14 @@ const ContactForm = () => {
 
     const [ isSubmitted, setIsSubmitted ]=useState(false);
 
-    const isAnyFieldEmpty = Object.values(formData).some(value => !value.trim());
-
     const [ errors, setErrors ]=useState({});
 
     const validation = () => {
         const newErrors = {};
-        if (!isValidEmail(formData.email)) newErrors.email = "Please enter a valid email.";
+        if (!formData.name.trim()) newErrors.name = "Please enter your name.";
+        if (!formData.email.trim()) newErrors.email = "Please enter your email";
+        else if (!isValidEmail(formData.email)) newErrors.email = "Please enter a valid email.";
+        if (!formData.message.trim()) newErrors.message = "Please enter a message";
             return newErrors;
     }
 
@@ -81,9 +82,9 @@ const ContactForm = () => {
                                 rows={8}
                                 cols={20}
                                 placeholder={"Your message here"}
-                                error={errors.name}
+                                error={errors.message}
                                 required/>
-                    <Button id="submit-btn" type="submit" disabled={isAnyFieldEmpty} className="submit-btn" label="Send"/>
+                    <Button id="submit-btn" type="submit" className="submit-btn" label="Send"/>
                 </form>
             </div>
         );

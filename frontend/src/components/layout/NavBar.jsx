@@ -35,5 +35,4 @@ const NavBar = ({ loggedInUser, setLoggedInUser }) =>{
     );
 }
 
-
 export default NavBar;

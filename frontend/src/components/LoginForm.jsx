@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import FormField from './shared/FormField';
 import Button from './shared/Button';
-import '../utils/validators';
 import { globalPost } from './APIs/api';
 
 const LoginForm = ({ setLoggedInUser }) => {
@@ -49,9 +48,7 @@ const LoginForm = ({ setLoggedInUser }) => {
             } catch (err) {
             setErrors({loginErrors : err.message});
             }
-
         }
-    
             return(
                 <div className="login-form">
                     <h1>Welcome!</h1>
@@ -71,7 +68,6 @@ const LoginForm = ({ setLoggedInUser }) => {
                                 value={loginData.emailAddress}
                                 onChange={handleChange}
                                 error={errors.emailAddress}
-                                placeholder={"ChordRunner@gmail.com"}
                                 required/>
                         <FormField  label="Password:"
                                 id="password"
@@ -80,7 +76,6 @@ const LoginForm = ({ setLoggedInUser }) => {
                                 value={loginData.password}
                                 onChange={handleChange}
                                 error={errors.password}
-                                placeholder={"K3ys&Ch0rds"}
                                 required/>
                         <Button id="submit-btn" type="submit" className="submit-btn" label="Login!"/>
                     </form>

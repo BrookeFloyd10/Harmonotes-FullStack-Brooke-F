@@ -1,6 +1,4 @@
-
-
-function XPTracker({practiceData}) {
+const XPTracker = ({practiceData}) => {
 
     const completedTasks = practiceData.filter((exercise) => {
       return exercise.completed
@@ -15,6 +13,6 @@ function XPTracker({practiceData}) {
             <p>{dailyXp}</p>
         </section>
     );
-}
+};
 
 export default XPTracker;

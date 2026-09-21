@@ -1,4 +1,3 @@
-
 const PracticeCard = ({ exercise, onToggleComplete }) => {
     
     const { title, description, duration, xpValue, videoLink, completed } = exercise;
@@ -22,7 +21,10 @@ const PracticeCard = ({ exercise, onToggleComplete }) => {
                 </div>
             )}
             <p>{xpValue} XP</p>
-            <a href={videoLink} target="_blank" rel="noopener noreferrer">Reference Video!</a>
+
+            {videoLink && (
+                <a href={videoLink} target="_blank" rel="noopener noreferrer">Reference Video!</a>
+        )}
         </article>
     );
 };

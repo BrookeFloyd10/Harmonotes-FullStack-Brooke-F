@@ -26,16 +26,16 @@ const Library = () => {
                 setIsLoading(false);
             }
         };
-        fetchLibraryData()
+        fetchLibraryData();
         }, [instrumentFilter]);
 
-        if (isLoading) return <Loading />;
-        if (error) return <ErrorMessage message={error} />
+    if (isLoading) return <Loading />;
+    if (error) return <ErrorMessage message={error} />
 
-        const songs = libraryData.filter(item => item.type === "song");
-        const exercises = libraryData.filter(item => item.type === "exercise");
-        const resources = libraryData.filter(item => item.type === "reference");
-        const noResults = "There are no materials for this instrument yet!";
+    const songs = libraryData.filter(item => item.type === "song");
+    const exercises = libraryData.filter(item => item.type === "exercise");
+    const resources = libraryData.filter(item => item.type === "reference");
+    const noResults = "There are no materials for this instrument yet!";
         return(
             <div className="library-page">
                 <h1>Studio Library</h1>
@@ -46,7 +46,7 @@ const Library = () => {
             </select>
 
           
-{/* maps over  fetched data to create list items making updating much easier*/}
+{/* maps over fetched data to create list items making updating much easier*/}
 
             <div className="songs">
                 <h2>Songs</h2>

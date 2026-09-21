@@ -1,5 +1,5 @@
 
-const ErrorMessage =({message}) => {
+const ErrorMessage = ({message}) => {
     return(
         <p>Error: {message}</p>
     );
