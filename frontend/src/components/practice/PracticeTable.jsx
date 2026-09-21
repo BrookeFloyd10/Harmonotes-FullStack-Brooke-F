@@ -1,6 +1,11 @@
 import Button from "../shared/Button"
+import DeleteModal from "../shared/DeleteModal"
+import { useState } from "react";
+
 
 const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
+    const [ sessionToDelete, setSessionToDelete ] = useState(null);
+
     if (sessions.length === 0) {
         return (
             <div className="empty-table">
@@ -9,7 +14,7 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
         );
     }
         return (
-          <div className="scrolling-table">
+            <div className="scrolling-table">
             <table className="practice-table">
                 <thead>
                     <tr>
@@ -36,11 +41,20 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
                                     type="button"
                                     className="remove-btn"
                                     label="Remove"
-                                    onClick={ () => handleDelete(session.id)}/></td>
-                    </tr>
+                                    onClick={ () => setSessionToDelete(session)}/>
+                        </td>
+                        </tr>
                     ))}
                 </tbody>
             </table>
+            {sessionToDelete && ( 
+                        <DeleteModal 
+                        title="Practice Session" 
+                        id={sessionToDelete} 
+                        handleDelete={handleDelete}
+                        onCancel={ ()=> {setSessionToDelete(null)}}
+                        />
+                        )}
           </div>
 
     );

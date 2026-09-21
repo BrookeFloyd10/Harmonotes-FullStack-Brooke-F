@@ -15,8 +15,7 @@ const DeleteModal = ({ handleDelete, onCancel, id, title }) => {
                     className="cancel-btn"
                     type="button"
                     onClick={onCancel}
-                    label="No, Cancel"
-                />
+                    label="No, Cancel" />
             </div> 
         </div> 
     );
