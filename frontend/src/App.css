@@ -305,19 +305,19 @@ main {
 
 .confetti-up {
     color: #E0AF3A;
-    animation: confetti-pop-up 1.5s ease-out forwards;
+    animation: confetti-pop-up 1.3s ease-out forwards;
 }
 
 
 .confetti-left {
     color: #711F31;
-    animation: confetti-pop-left 1.5s ease-out forwards;
+    animation: confetti-pop-left 1.3s ease-out forwards;
 }
 
 
 .confetti-right {
     color: #355367;
-    animation: confetti-pop-right 1.5s ease-out forwards;
+    animation: confetti-pop-right 1.3s ease-out forwards;
 }
 
 
@@ -562,6 +562,7 @@ article a:hover {
 .overlay-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -569,6 +570,26 @@ article a:hover {
     height: 100%;
     background-color: #00000021;
 }
+
+
+.delete-modal {
+    width: clamp(200px, 60vw, 350px);
+    border-radius: 10px;
+    border: 1.5px solid #9e7006;
+    padding: 1.2rem;
+    text-align: center;
+    box-shadow: 0 12px 28px #00000018, 0 4px 8px #00000010;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+    background-color: #d9b561;
+}
+
+
+.delete-modal button {
+    margin: 0.5rem;
+    border: 1px solid #806016;
+}
+
 
 .about-page {
     padding: 2rem clamp(1.5rem, 6vw, 4rem);
@@ -696,7 +717,8 @@ textarea:focus {
 
 .edit-btn,
 .remove-btn,
-.submit-btn {
+.submit-btn,
+.cancel-btn {
     background: linear-gradient(180deg, #b04456 0%, #9E3845 100%);
     color:white;
     border: none;
@@ -709,7 +731,8 @@ textarea:focus {
 
 
 .edit-btn,
-.remove-btn {
+.remove-btn, 
+.cancel-btn {
     margin: 0.2rem 0.5rem;
     padding: .5rem 1rem;
 }

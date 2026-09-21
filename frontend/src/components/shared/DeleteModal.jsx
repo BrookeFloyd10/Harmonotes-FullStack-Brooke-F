@@ -4,9 +4,10 @@ const DeleteModal = ({ handleDelete, onCancel, id, title }) => {
     return (
       <div className="overlay-wrapper">
         <div className="delete-modal">
-            <h3>WAIT! Are you sure you want to delete {title}?</h3>
+            <h3>WAIT!</h3>
+            <p>Are you sure you want to delete {title}?</p>
                 <Button 
-                    className="delete-btn"
+                    className="remove-btn"
                     type="button"
                     onClick={() =>handleDelete(id)}
                     label= "Yes, Delete" />
