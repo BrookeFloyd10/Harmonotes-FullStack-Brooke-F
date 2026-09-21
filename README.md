@@ -1,5 +1,3 @@
-
-
 ![Harmonotes](docs/screenshots/hero.png)
 
 # 🎵 Harmonotes
@@ -14,8 +12,6 @@
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
 **[About](#-about) · [App Preview](#-app-preview) · [Features](#-features) · [Tech Stack](#%EF%B8%8F-tech-stack) · [Structure](#%EF%B8%8F-project-structure) · [Planning & Design](#-planning--design) · [Installation](#-installation) · [API](#%EF%B8%8F-api-reference) · [Roadmap**](#-roadmap-to-future-development)
-
-
 
 ---
 
@@ -38,17 +34,17 @@ Just one hour after a music lesson, students forget over half of what they learn
 ## 📸 App Preview
 
 
-|                                                 |                                                           |                                                                   |                                              |                                                             |
-| ----------------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------- |
-| ![](docs/screenshots/dashboard.png)*Dashboard* | ![](docs/screenshots/library-songs.png)*Library — Songs* | ![](docs/screenshots/library-exercises.png)*Library — Exercises* | ![](docs/screenshots/about-page.png)*About* | ![](docs/screenshots/navbar-closeup.png)*Staff-styled nav* |
+| Dashboard                           | Library - Songs                         | Library - Exercises                         | About                                | Musical staff nav                        |
+| ----------------------------------- | --------------------------------------- | ------------------------------------------- | ------------------------------------ | ---------------------------------------- |
+| ![](docs/screenshots/dashboard.png) | ![](docs/screenshots/library-songs.png) | ![](docs/screenshots/library-exercises.png) | ![](docs/screenshots/about-page.png) | ![](docs/screenshots/navbar-closeup.png) |
 
 
 **Forms & error handling**
 
 
-|                                                               |                                                          |                                                            |                                                         |                                                                        |                                                                  |
-| ------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| ![](docs/screenshots/login-validation.png)*Login validation* | ![](docs/screenshots/log-session-form.png)*Log session* | ![](docs/screenshots/edit-session-form.png)*Edit session* | ![](docs/screenshots/delete-modal.png)*Delete confirm* | ![](docs/screenshots/contact-form-validation.png)*Contact validation* | ![](docs/screenshots/contact-form-success.png)*Contact success* |
+| Login validation                           | Log session                                | Edit session                                | Delete confirmation                    | Contact validation                                | Contact confirmation                           |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------- | -------------------------------------- | ------------------------------------------------- | ---------------------------------------------- |
+| ![](docs/screenshots/login-validation.png) | ![](docs/screenshots/log-session-form.png) | ![](docs/screenshots/edit-session-form.png) | ![](docs/screenshots/delete-modal.png) | ![](docs/screenshots/contact-form-validation.png) | ![](docs/screenshots/contact-form-success.png) |
 
 
 
@@ -98,14 +94,14 @@ Harmonotes-FullStack-Brooke-F/
 Wireframes and an ERD were completed before writing any code — including screens scoped for future development.
 
 
-|                                                              |                                                                     |                                                    |                                                  |                                                                                |
-| ------------------------------------------------------------ | ------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------ |
-| ![](docs/wireframes/wireframe-home-login.png)*Home / Login* | ![](docs/wireframes/wireframe-student-views.png)*Desktop & tablet* | ![](docs/wireframes/wireframe-mobile.png)*Mobile* | ![](docs/wireframes/wireframe-about.png)*About* | ![](docs/wireframes/wireframe-future-instructor.png)*Future: Instructor view* |
+| Home / Login                                  | Desktop & tablet                                 | Mobile                                    | About                                    | Future: Instructor view                              |
+| --------------------------------------------- | ------------------------------------------------ | ----------------------------------------- | ---------------------------------------- | ---------------------------------------------------- |
+| ![](docs/wireframes/wireframe-home-login.png) | ![](docs/wireframes/wireframe-student-views.png) | ![](docs/wireframes/wireframe-mobile.png) | ![](docs/wireframes/wireframe-about.png) | ![](docs/wireframes/wireframe-future-instructor.png) |
 
 
 ![Harmonotes ERD](docs/erd/harmonotes-erd.png)
 
-*Entity Relationship Diagram — grayed-out tables are scoped for future development.*
+*Entity Relationship Diagram - grayed-out tables are scoped for future development.*
 
 [Full wireframe set](https://excalidraw.com/#json=1teDsRSkcFqFfXRubluT0,oJ2m0l_5cmiyJk7do5sKvw) · [Full ERD](https://docs.google.com/document/d/1IrQWKFfS0T1dQtSAWwm2re9g-4PRUHArJcGMzZ8DLfs/edit?usp=sharing)
 
