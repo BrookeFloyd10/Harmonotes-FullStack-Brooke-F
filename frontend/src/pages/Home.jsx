@@ -3,14 +3,15 @@ import LoginForm from "../components/LoginForm";
 
 const Home = ({ setLoggedInUser }) => {
     return(
-        <>
-            <div className="home-page">
-                <img src={homepage} alt="artsy photo of guitar piano and drum sticks" />
-                <p>Where practice meets progress.</p>
-            </div>
+            <div className="home-page-wrapper">
 
-            <LoginForm setLoggedInUser={setLoggedInUser} />
-        </>
+                <div className="home-page">
+                    <img src={homepage} alt="artsy photo of guitar piano and drum sticks" />
+                    <p>Where practice meets progress.</p>
+                </div>
+
+                <LoginForm setLoggedInUser={setLoggedInUser} />
+            </div>
     )
 }
 
