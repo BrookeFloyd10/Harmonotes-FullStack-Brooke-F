@@ -2,7 +2,6 @@ import Button from "../shared/Button"
 import DeleteModal from "../shared/DeleteModal"
 import { useState } from "react";
 
-
 const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
     const [ sessionToDelete, setSessionToDelete ] = useState(null);
 
@@ -21,7 +20,7 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
                         <th>Practice Focus</th>
                         <th>Duration</th>
                         <th>Triumphs/Challenges</th>
-                        <th> </th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,9 +49,9 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
             {sessionToDelete && ( 
                         <DeleteModal 
                         title="Practice Session" 
-                        id={sessionToDelete} 
+                        id={sessionToDelete.id} 
                         handleDelete={handleDelete}
-                        onCancel={ ()=> {setSessionToDelete(null)}}
+                        onCancel={ ()=> setSessionToDelete(null)}
                         />
                         )}
           </div>
