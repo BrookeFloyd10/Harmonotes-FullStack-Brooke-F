@@ -1,211 +1,172 @@
-<div align="center">
+
+
+![Harmonotes](docs/screenshots/hero.png)
 
 # 🎵 Harmonotes
 
-### A Full-Stack Music Practice & Lesson Companion
+### Where practice meets progress.
 
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)](https://reactrouter.com/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
-[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
-[![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
-[![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
-[![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)](https://hibernate.org/)
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+**[About](#-about) · [App Preview](#-app-preview) · [Features](#-features) · [Tech Stack](#%EF%B8%8F-tech-stack) · [Structure](#%EF%B8%8F-project-structure) · [Planning & Design](#-planning--design) · [Installation](#-installation) · [API](#%EF%B8%8F-api-reference) · [Roadmap**](#-roadmap-to-future-development)
 
-**[About](#-about-the-project) • [Features](#-features) • [Tech Stack](#%EF%B8%8F-tech-stack) • [Installation](#-installation) • [Database](#%EF%B8%8F-database-structure-erd) • [API](#%EF%B8%8F-api-endpoints) • [Future Features](#-future-features--known-issues)**
 
-</div>
 
 ---
+
+
 
 ## 🌐 Live Demo
 
-The front end is deployed on Netlify: **[harmonotesapp.netlify.app](https://harmonotesapp.netlify.app/)**
+Frontend deployed on Netlify: **[harmonotesapp.netlify.app](https://harmonotesapp.netlify.app/)**
 
-> ⚠️ The backend currently runs locally only, so live data (login, library, practice sessions) won't load until the backend is deployed as well. See [Installation](#-installation) to run the full app locally.
+> Backend currently runs locally only — see [Installation](#-installation) to run the full app.
 
-## 💡 About the Project
 
-Harmonotes is a full-stack web application built for private music instructors and their students. The app is designed to give students one place to track their practice, log lessons, and pull sheet music or reference materials for the instruments they're learning. Students can log in, record practice sessions with notes on their focus and challenges, mark practice exercises complete and watch their daily XP grow, and browse a filterable library of songs, exercises, and theory guides organized by instrument. The front end is built with React and Vite, while all data is persisted through a Java Spring Boot REST API backed by a MySQL database.
 
-This project was built as a solo capstone project, with an emphasis on a clean, hand-styled UI (no component libraries), full CRUD functionality across multiple entities, and getting real, hands-on practice with the full request lifecycle — from a button click in React, through a REST controller, down to the database and back.
+## 💡 About
 
----
+Just one hour after a music lesson, students forget over half of what they learned, and within 24 hours that number climbs to 70%. That gap between in-person lessons and at-home practice is where students lose momentum, get discouraged, and often quit. ***Harmonotes*** was built to close that gap, giving students one place to log practice sessions, complete assigned exercises and earn XP, and browse a filterable library of songs, exercises, and theory guides by instrument. Built solo as a full-stack capstone: React/Vite frontend, Spring Boot REST API, MySQL database, full CRUD across six entities.
+
+**Database entities:** `users` · `students` · `practice_sessions` · `practice_exercises` · `library_item` · `contact_messages`
+
+## 📸 App Preview
+
+
+|                                                 |                                                           |                                                                   |                                              |                                                             |
+| ----------------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------- |
+| ![](docs/screenshots/dashboard.png)*Dashboard* | ![](docs/screenshots/library-songs.png)*Library — Songs* | ![](docs/screenshots/library-exercises.png)*Library — Exercises* | ![](docs/screenshots/about-page.png)*About* | ![](docs/screenshots/navbar-closeup.png)*Staff-styled nav* |
+
+
+**Forms & error handling**
+
+
+|                                                               |                                                          |                                                            |                                                         |                                                                        |                                                                  |
+| ------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| ![](docs/screenshots/login-validation.png)*Login validation* | ![](docs/screenshots/log-session-form.png)*Log session* | ![](docs/screenshots/edit-session-form.png)*Edit session* | ![](docs/screenshots/delete-modal.png)*Delete confirm* | ![](docs/screenshots/contact-form-validation.png)*Contact validation* | ![](docs/screenshots/contact-form-success.png)*Contact success* |
+
+
+
 
 ## 🎨 Features
 
-### Public-Facing Site
-- **Home Page** with login for returning students
-- **About Page** featuring the instructor's bio and a working **Contact Form**, which submits directly to the database
-- **Responsive Design** with custom breakpoints for desktop, tablet, and mobile
-- **Accessibility**: semantic HTML elements, descriptive `alt` text on all images, and a clear heading hierarchy
+- Login with inline validation; nav bar changes based on login status
+- XP tracker, practice exercises with completion + confetti, full CRUD practice log
+- Custom-built delete confirmation modal (no browser `alert()`/`confirm()` anywhere)
+- Library filtering by instrument via a real backend query, grouped into Songs / Exercises / Theory & Guides
+- Contact form with real backend POST and full validation
 
-### Student Dashboard (Authenticated)
-- **XP Tracker**: daily XP is calculated live from completed practice exercises
-- **Practice Exercises**: students can view assigned exercises, toggle them complete, and watch a small confetti animation celebrate the win
-- **Practice Log**: full CRUD — students can log a new practice session, edit or delete an existing one, and see their full practice history in a scrollable table
-- **Custom Delete Confirmation**: a hand-built modal (no browser `confirm()`/`alert()`) confirms before any session is deleted
 
-### Studio Library
-- **Instrument Filtering**: a dropdown filters library materials by instrument, backed by a real database query (not client-side filtering)
-- **Organized by Type**: results are grouped into Songs, Exercises, and Theory & Guides, each with its own empty-state message if nothing matches
-- **Sheet Music & Audio Links**: each item links out to its PDF and, where available, a play-along audio track
-
----
 
 ## 🛠️ Tech Stack
 
-### Front End
+**Frontend:** React 19, Vite, React Router, hand-written CSS — no component library
+**Backend:** Java 21, Spring Boot 4, Spring Data JPA / Hibernate
+**Database:** MySQL · **Deployment:** Netlify (frontend)
 
-| Technology | Description |
-|---|---|
-| **React** | Component-based UI, built entirely with functional components and hooks |
-| **Vite** | Fast dev server and build tooling |
-| **React Router** | Client-side routing with protected routes based on login status |
-| **CSS** | Hand-written external stylesheet — no Tailwind or component library, using Flexbox, media queries, and CSS animations |
-| **Fetch API** | All HTTP requests to the backend, wrapped in shared helper functions |
+## 🗂️ Project Structure
 
-### Back End & Database
+```
+Harmonotes-FullStack-Brooke-F/
+├── backend/src/main/java/com/harmonotesapp/backend/
+│   ├── config/          # DataInitializer (hardcoded seed data)
+│   ├── controllers/     # REST controllers, one per entity
+│   ├── dto/             # LoginRequestDTO
+│   ├── models/          # JPA entities
+│   ├── repositories/    # Spring Data JPA repositories
+│   └── services/        # PracticeSessionService
+│
+└── frontend/src/
+    ├── components/
+    │   ├── APIs/         # globalGet / globalPost / globalPut / globalDelete
+    │   ├── layout/        # Header, NavBar, Footer
+    │   ├── practice/       # PracticeCard, PracticeLog, PracticeTable, XPTracker
+    │   └── shared/         # Button, DeleteModal, FormField, ContactForm, etc.
+    ├── pages/            # Home, Dashboard, Library, About
+    └── utils/            # validators.js
+```
 
-| Technology | Description |
-|---|---|
-| **Java** | Core language for the backend application |
-| **Spring Boot** | RESTful API framework |
-| **Maven** | Dependency management and build tool |
-| **Hibernate / Spring Data JPA** | ORM layer — repository interfaces auto-generate queries from method names |
-| **MySQL** | Relational database for all persisted data |
 
----
+
+## 🧭 Planning & Design
+
+Wireframes and an ERD were completed before writing any code — including screens scoped for future development.
+
+
+|                                                              |                                                                     |                                                    |                                                  |                                                                                |
+| ------------------------------------------------------------ | ------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------ |
+| ![](docs/wireframes/wireframe-home-login.png)*Home / Login* | ![](docs/wireframes/wireframe-student-views.png)*Desktop & tablet* | ![](docs/wireframes/wireframe-mobile.png)*Mobile* | ![](docs/wireframes/wireframe-about.png)*About* | ![](docs/wireframes/wireframe-future-instructor.png)*Future: Instructor view* |
+
+
+![Harmonotes ERD](docs/erd/harmonotes-erd.png)
+
+*Entity Relationship Diagram — grayed-out tables are scoped for future development.*
+
+[Full wireframe set](https://excalidraw.com/#json=1teDsRSkcFqFfXRubluT0,oJ2m0l_5cmiyJk7do5sKvw) · [Full ERD](https://docs.google.com/document/d/1IrQWKFfS0T1dQtSAWwm2re9g-4PRUHArJcGMzZ8DLfs/edit?usp=sharing)
 
 ## 🚀 Installation
 
-### Prerequisites
-- Node.js (LTS version) and npm
-- Java Development Kit (JDK) 17+
-- MySQL Server (8.0+)
+**Backend** (`/backend`)
 
-### Back End Setup (Java / Spring Boot / MySQL)
+```bash
+git clone https://github.com/BrookeFloyd10/Harmonotes-FullStack-Brooke-F.git
+cd Harmonotes-FullStack-Brooke-F/backend
+```
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/BrookeFloyd10/Harmonotes-FullStack-Brooke-F.git
-   cd Harmonotes-FullStack-Brooke-F/backend
-   ```
+Create database `harmonotes` in MySQL, then add a `.env` file in `/backend`:
 
-2. **Create a local MySQL database:**
-   ```sql
-   CREATE DATABASE harmonotes;
-   ```
+```
+DB_USERNAME=your_mysql_username
+DB_PASSWORD=your_mysql_password
+```
 
-3. **Create a `.env` file** in the `backend` root directory with your local MySQL credentials:
-   ```
-   DB_USERNAME=your_mysql_username
-   DB_PASSWORD=your_mysql_password
-   ```
-   `application.properties` is already configured to read these values in:
-   ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/harmonotes
-   spring.datasource.username=${DB_USERNAME}
-   spring.datasource.password=${DB_PASSWORD}
-   spring.jpa.hibernate.ddl-auto=update
-   ```
+Run:
 
-4. **Run the application:**
-   ```bash
-   mvn spring-boot:run
-   ```
-   🟢 The API will be running at `http://localhost:8080`.
+```bash
+./mvnw spring-boot:run
+```
 
-   > **Note:** Login currently uses a small set of hardcoded credentials seeded on startup via `DataInitializer`, while full registration/authentication is still in progress (see [Future Features](#-future-features--known-issues) below). Check `DataInitializer.java` for the seeded test login.
+🟢 API at `http://localhost:8080`. Login uses hardcoded seed credentials (see `DataInitializer`) until real auth is built.
 
-### Front End Setup (React / Vite)
+**Frontend** (`/frontend`)
 
-1. **Navigate to the front end directory:**
-   ```bash
-   cd ../frontend
-   ```
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+🟢 App at `http://localhost:5173`.
 
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-   🟢 The app will be running at `http://localhost:5173`.
+## ⚙️ API Reference
 
----
 
-## 🗄️ Database Structure (ERD)
+| Method   | Endpoint                         | Description                                                                                                                          |
+| -------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| 🟡 POST  | `/api/login`                     | Authenticate with email + password                                                                                                   |
+| 🟢 GET   | `/api/library-items`             | All library items, or filter with `?instrument=`                                                                                     |
+| 🟢🟡🔵🔴 | `/api/practice-exercises[/{id}]` | Full CRUD endpoints (create/edit/delete via Postman only — student UI only toggles completion until the instructor dashboard exists) |
+| 🟢🟡🔵🔴 | `/api/practice-sessions[/{id}]`  | Full CRUD, all exposed in the student UI                                                                                             |
+| 🟡 POST  | `/api/contact-messages`          | Submit a message from the Contact form                                                                                               |
 
-Harmonotes is built around **six core entities** managed by Hibernate: `User`, `Student`, `PracticeSession`, `PracticeExercise`, `LibraryItem`, and `ContactMessage`.
 
-![Harmonotes Entity Relationship Diagram](docs/harmonotes-erd.png)
 
-> 📌 The diagram above reflects the original project planning phase, including some tables (`Instructor`, `Parent`, `Student_Instrument`) scoped for future development. See [Future Features](#-future-features--known-issues) for the current state of those plans.
 
----
+## 🎼 Roadmap to future development
 
-## ⚙️ API Endpoints
+- Real authentication (registration, hashed passwords, Spring Security)
+- Instructor dashboard (student & library management)
+- Multi-instrument support via a dedicated `Instrument` entity
+- Interactive parent portal with secure messaging and payment features
+- In-app audio playback and backend deployment
 
-### Authentication 🔐
 
-| Method | Endpoint | Description |
-|---|---|---|
-| 🟡 POST | `/api/login` | Authenticate with email + password |
-
-### Library Items 🎼
-
-| Method | Endpoint | Description |
-|---|---|---|
-| 🟢 GET | `/api/library-items` | Retrieve all library items, or filter with `?instrument=` |
-| 🟢 GET | `/api/library-items/{id}` | Retrieve a single library item |
-
-### Practice Exercises 🎹
-
-| Method | Endpoint | Description |
-|---|---|---|
-| 🟢 GET | `/api/practice-exercises` | Retrieve all practice exercises |
-| 🟢 GET | `/api/practice-exercises/{id}` | Retrieve a single exercise |
-| 🟡 POST | `/api/practice-exercises` | Create a new exercise |
-| 🔵 PUT | `/api/practice-exercises/{id}` | Update an exercise (e.g. toggle completion) |
-| 🔴 DELETE | `/api/practice-exercises/{id}` | Delete an exercise |
-
-### Practice Sessions 📝
-
-| Method | Endpoint | Description |
-|---|---|---|
-| 🟢 GET | `/api/practice-sessions` | Retrieve a student's logged practice sessions |
-| 🟡 POST | `/api/practice-sessions` | Log a new practice session |
-| 🔵 PUT | `/api/practice-sessions/{id}` | Edit an existing session |
-| 🔴 DELETE | `/api/practice-sessions/{id}` | Delete a session (behind a confirmation modal in the UI) |
-
-### Contact Messages ✉️
-
-| Method | Endpoint | Description |
-|---|---|---|
-| 🟡 POST | `/api/contact-messages` | Submit a message from the public Contact form |
-
----
-
-## 🔮 Future Features & Known Issues
-
-- **Real Authentication**: replace hardcoded login credentials with full registration, hashed passwords, and Spring Security
-- **Multi-Instrument Support**: introduce a dedicated `Instrument` entity with a many-to-many relationship, so a single library item or student can be associated with more than one instrument
-- **Dynamic Sheet Music/Audio Selection**: render the correct sheet music and audio track based on a student's selected instrument
-- **Audio Playback Modal**: play audio tracks in an in-app modal player instead of opening a new tab
-- **Instructor & Parent Views**: build out the `Instructor` and `Parent` roles planned in the original ERD
-- **Deployment**: the app currently runs locally only; a hosted version is planned
-
----
 
 ## 🧑‍💻 Author
 
-**Brooke Floyd**
-[GitHub](https://github.com/BrookeFloyd10) · [Repository](https://github.com/BrookeFloyd10/Harmonotes-FullStack-Brooke-F)
+**Brooke Floyd** — [GitHub](https://github.com/BrookeFloyd10) · [Repository](https://github.com/BrookeFloyd10/Harmonotes-FullStack-Brooke-F)
