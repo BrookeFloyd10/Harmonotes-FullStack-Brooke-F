@@ -119,12 +119,12 @@ main {
     width: auto;
     margin-bottom: -2px;
     display: block;
-    
+    filter: brightness(0);
 }
 
 
 #treble-clef {
-    height: 4.5rem;;
+    height: 4.5rem;
     margin: 1rem;
     width: auto;
 }
@@ -231,7 +231,7 @@ main {
 
 
 .xp-tracker {
-    background: linear-gradient(180deg, #FFE5A1 0%, #f3d488 100%);
+    background: linear-gradient(180deg, #FFE5A1 0%, #f6e6c0 100%);
     color: #711F31;
     width: fit-content;
     height: 3rem;
@@ -243,8 +243,7 @@ main {
     text-align: center;
     font-size: .8rem;
     font-weight: 700;
-    border: 2px solid #E0AF3A;
-    border-radius: 12px;
+    border-radius: 15px;
     box-shadow: inset 0 1px 0 #ffffff80, 0 4px 12px #0000000f, 0 2px 4px #00000008;
 }
 
@@ -371,7 +370,7 @@ main {
 .practice-card {
     justify-content: flex-start;
     align-items: center;
-    gap: .75;
+    gap: .15rem;
     border-top: 3px solid #711f3157; 
 }
 
@@ -501,7 +500,7 @@ article a:hover {
 .practice-log h2 {
     font-family: Georgia, serif;
     color: #355367;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin: 0 0 .5rem 0;
 }
 
@@ -575,13 +574,13 @@ article a:hover {
 .delete-modal {
     width: clamp(200px, 60vw, 350px);
     border-radius: 10px;
-    border: 1.5px solid #9e7006;
+    border: 2px solid #9e7006;
     padding: 1.2rem;
     text-align: center;
     box-shadow: 0 12px 28px #00000018, 0 4px 8px #00000010;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: small;
-    background-color: #d9b561;
+    background-color: #f2dfb1;
 }
 
 
@@ -788,7 +787,7 @@ button:not(:disabled):active {
 }
 
 
-#dismiss-btn:hover {
+.success-message .dismiss-btn:hover {
     background: linear-gradient(180deg, #15b530 0%, #0e721e 100%);  
     cursor: pointer;
     padding: .4rem .9rem;
