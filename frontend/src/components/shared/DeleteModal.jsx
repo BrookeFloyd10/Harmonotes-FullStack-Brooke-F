@@ -9,7 +9,10 @@ const DeleteModal = ({ handleDelete, onCancel, id, title }) => {
                 <Button 
                     className="remove-btn"
                     type="button"
-                    onClick={() =>handleDelete(id)}
+                    onClick={() => { 
+                        handleDelete(id);
+                        onCancel();
+                    }}
                     label= "Yes, Delete" />
         
                 <Button 
