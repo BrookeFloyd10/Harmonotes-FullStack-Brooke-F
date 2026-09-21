@@ -68,7 +68,6 @@ const LoginForm = ({ setLoggedInUser }) => {
                                 value={loginData.emailAddress}
                                 onChange={handleChange}
                                 error={errors.emailAddress}
-                                placeholder={"ChordRunner@gmail.com"}
                                 required/>
                         <FormField  label="Password:"
                                 id="password"
@@ -77,7 +76,6 @@ const LoginForm = ({ setLoggedInUser }) => {
                                 value={loginData.password}
                                 onChange={handleChange}
                                 error={errors.password}
-                                placeholder={"K3ys&Ch0rds"}
                                 required/>
                         <Button id="submit-btn" type="submit" className="submit-btn" label="Login!"/>
                     </form>
