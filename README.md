@@ -1,63 +1,82 @@
+
+
 ![Harmonotes](docs/screenshots/hero.png)
 
-# 🎵 Harmonotes
-
-### Where practice meets progress.
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-
-**[About](#-about) · [App Preview](#-app-preview) · [Features](#-features) · [Tech Stack](#%EF%B8%8F-tech-stack) · [Structure](#%EF%B8%8F-project-structure) · [Planning & Design](#-planning--design) · [Installation](#-installation) · [API](#%EF%B8%8F-api-reference) · [Roadmap**](#-roadmap-to-future-development)
-
----
+**Where practice meets progress.** 🎵
+  
 
 
+🎤 **Live demo:** [harmonotesapp.netlify.app](https://harmonotesapp.netlify.app/) — frontend only; see [Installation](#-installation) to run the full app with a working backend.
 
-## 🌐 Live Demo
+![Entities](https://img.shields.io/badge/Entities-6-355367?style=flat-square) ![Controllers](https://img.shields.io/badge/Controllers-7-9E3845?style=flat-square) ![Components](https://img.shields.io/badge/Components-19+-E0AF3A?style=flat-square&logoColor=black) ![CRUD](https://img.shields.io/badge/CRUD-Full-355367?style=flat-square)
 
-Frontend deployed on Netlify: **[harmonotesapp.netlify.app](https://harmonotesapp.netlify.app/)**
+![React](docs/icons/react-original.svg "React")![JavaScript](docs/icons/javascript-original.svg "JavaScript")![CSS3](docs/icons/css3-original.svg "CSS3")![Vite](docs/icons/vitejs-original.svg "Vite")![Java](docs/icons/java-original.svg "Java")![Spring Boot](docs/icons/spring-original.svg "Spring Boot")![Hibernate](docs/icons/hibernate-original.svg "Hibernate")![MySQL](docs/icons/mysql-original.svg "MySQL")![Netlify](docs/icons/netlify-original.svg "Netlify")![Git](docs/icons/git-original.svg "Git")
 
-> Backend currently runs locally only — see [Installation](#-installation) to run the full app.
+  
+
+
+![Why](https://img.shields.io/badge/Why_I_Built_This-355367?style=for-the-badge) ![Preview](https://img.shields.io/badge/See_It_In_Action-9E3845?style=for-the-badge) ![Features](https://img.shields.io/badge/Features-E0AF3A?style=for-the-badge&logoColor=black) ![Learned](https://img.shields.io/badge/What_I_Learned-355367?style=for-the-badge) ![Install](https://img.shields.io/badge/Installation-9E3845?style=for-the-badge) ![Next](https://img.shields.io/badge/What's_Next-E0AF3A?style=for-the-badge&logoColor=black)
 
 
 
-## 💡 About
-
-Just one hour after a music lesson, students forget over half of what they learned, and within 24 hours that number climbs to 70%. That gap between in-person lessons and at-home practice is where students lose momentum, get discouraged, and often quit. ***Harmonotes*** was built to close that gap, giving students one place to log practice sessions, complete assigned exercises and earn XP, and browse a filterable library of songs, exercises, and theory guides by instrument. Built solo as a full-stack capstone: React/Vite frontend, Spring Boot REST API, MySQL database, full CRUD across six entities.
-
-**Database entities:** `users` · `students` · `practice_sessions` · `practice_exercises` · `library_item` · `contact_messages`
-
-## 📸 App Preview
-
-
-| Dashboard                           | Library - Songs                         | Library - Exercises                         | About                                | Musical staff nav                        |
-| ----------------------------------- | --------------------------------------- | ------------------------------------------- | ------------------------------------ | ---------------------------------------- |
-| ![](docs/screenshots/dashboard.png) | ![](docs/screenshots/library-songs.png) | ![](docs/screenshots/library-exercises.png) | ![](docs/screenshots/about-page.png) | ![](docs/screenshots/navbar-closeup.png) |
-
-
-**Forms & error handling**
-
-
-| Login validation                           | Log session                                | Edit session                                | Delete confirmation                    | Contact validation                                | Contact confirmation                           |
-| ------------------------------------------ | ------------------------------------------ | ------------------------------------------- | -------------------------------------- | ------------------------------------------------- | ---------------------------------------------- |
-| ![](docs/screenshots/login-validation.png) | ![](docs/screenshots/log-session-form.png) | ![](docs/screenshots/edit-session-form.png) | ![](docs/screenshots/delete-modal.png) | ![](docs/screenshots/contact-form-validation.png) | ![](docs/screenshots/contact-form-success.png) |
+![](docs/dividers/divider-blue-gold.png)
 
 
 
+## 🎼 Why I Built This
 
-## 🎨 Features
+> As a lifelong music lover, I've seen firsthand how much of a difference music can make in someone's life, at any age, in any capacity. I wanted to build something that makes it easier to hold onto that.
+>
+> Whether it's a kid or an adult, the gap between a weekly lesson and real progress is real. One lesson a week just isn't enough, but for most people, it's what they can actually afford. It's so much easier to stick with something when you have a real tool to manage your practice and track your progress.
 
-- Login with inline validation; nav bar changes based on login status
-- XP tracker, practice exercises with completion + confetti, full CRUD practice log
-- Custom-built delete confirmation modal (no browser `alert()`/`confirm()` anywhere)
-- Library filtering by instrument via a real backend query, grouped into Songs / Exercises / Theory & Guides
-- Contact form with real backend POST and full validation
+Just one hour after a lesson, students forget over half of what they learned. Within 24 hours, that number climbs to 70%. ***Harmonotes*** exists to close that gap — one place for students to log practice sessions, complete assigned exercises and earn XP, and browse a filterable library of songs, exercises, and theory guides by instrument.
+
+Built solo, front to back, as a full-stack capstone: React on the front end, Spring Boot on the back, MySQL underneath, with full CRUD across six real database entities.
+
+**Database entities:** 
+· `users` · `students` · `practice_sessions` ·
+· `practice_exercises` · `library_item` · `contact_messages` ·
+
+![](docs/dividers/divider-gold-maroon.png)
 
 
+
+## 🎹 See It In Action
+
+*Dashboard*    ·    *Library*    ·    *Exercises & Theory*    ·    *About*    ·    *Musical staff nav*
+
+
+|                                                                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](docs/screenshots/dashboard.png) ![](docs/screenshots/library-songs.png) ![](docs/screenshots/library-exercises.png) ![](docs/screenshots/about-page.png) ![](docs/screenshots/navbar-closeup.png) |
+
+
+  
+
+
+**A closer look at the details 🎶**
+
+*Login validation*   ·   *Log session*   ·   *Edit session*   ·   *Delete confirmation*   ·   *Contact validation*   ·   *Contact confirmation*
+
+
+|                                                                                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](docs/screenshots/login-validation.png) ![](docs/screenshots/log-session-form.png) ![](docs/screenshots/edit-session-form.png) ![](docs/screenshots/delete-modal.png) ![](docs/screenshots/contact-form-validation.png) ![](docs/screenshots/contact-form-success.png) |
+
+
+![](docs/dividers/divider-maroon-blue.png)
+
+
+
+## 🎧 Features
+
+🎵 Login with real inline validation; the nav bar itself changes based on who's logged in
+🎵 A live XP tracker, practice exercises with completion tracking and a confetti celebration on the win
+🎵 Full CRUD practice log — log, edit, and delete sessions, each guarded by a hand-built confirmation modal (no browser `alert()`/`confirm()` anywhere in this app)
+🎵 Library filtering that hits a real backend query, not a client-side trick, grouped into Songs, Exercises, and Theory & Guides
+🎵 A Contact form that actually posts to a real backend entity and validates every field before it does
+
+![](docs/dividers/divider-blue-gold.png)
 
 ## 🛠️ Tech Stack
 
@@ -87,23 +106,44 @@ Harmonotes-FullStack-Brooke-F/
     └── utils/            # validators.js
 ```
 
+![](docs/dividers/divider-gold-maroon.png)
 
 
-## 🧭 Planning & Design
 
-Wireframes and an ERD were completed before writing any code — including screens scoped for future development.
+## 🎓 What I Learned
+
+This was my first time building something this size, end to end, alone — and a lot of it was learned the hard way, mid-build:
+
+- **The Spring Boot bean lifecycle isn't one-size-fits-all.** I started with `@PostConstruct` for seeding data, then learned `CommandLineRunner` runs after the *entire* application context is ready — the safer choice once your seed data depends on the database actually being live.
+- **A silently-mismatched setter parameter can break persistence with zero error.** One `this.videoLink = this.videoLink;` typo meant a form field saved as `null` every time, with no exception to point at it — the kind of bug that only shows up when you go looking for it.
+- **Closures matter.** Passing a function reference (`onClick={handleDelete}`) vs. calling it immediately (`onClick={handleDelete()}`) is a distinction I now check for by instinct, not by accident.
+- **Raster images and CSS color filters don't mix cleanly.** Tracing my own nav icons from raster sprites into real vector paths fixed a rendering bug no amount of CSS tweaking could — sometimes the fix is at the asset level, not the stylesheet.
+
+![](docs/dividers/divider-maroon-blue.png)
+
+## 🎻 Planning & Design
+
+Wireframes and an ERD were completed before writing a single line of code, including screens scoped for future development.
+  
 
 
-| Home / Login                                  | Desktop & tablet                                 | Mobile                                    | About                                    | Future: Instructor view                              |
-| --------------------------------------------- | ------------------------------------------------ | ----------------------------------------- | ---------------------------------------- | ---------------------------------------------------- |
-| ![](docs/wireframes/wireframe-home-login.png) | ![](docs/wireframes/wireframe-student-views.png) | ![](docs/wireframes/wireframe-mobile.png) | ![](docs/wireframes/wireframe-about.png) | ![](docs/wireframes/wireframe-future-instructor.png) |
+   ·    *Home / Login*    ·    *Desktop & tablet*    ·    *Mobile*    ·    *About*    ·    *Future: Instructor view*
+
+
+|                                                                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](docs/wireframes/wireframe-home-login.png) ![](docs/wireframes/wireframe-student-views.png) ![](docs/wireframes/wireframe-mobile.png) ![](docs/wireframes/wireframe-about.png) ![](docs/wireframes/wireframe-future-instructor.png) |
 
 
 ![Harmonotes ERD](docs/erd/harmonotes-erd.png)
 
-*Entity Relationship Diagram - grayed-out tables are scoped for future development.*
+*Entity Relationship Diagram — grayed-out tables are scoped for future development.*
 
 [Full wireframe set](https://excalidraw.com/#json=1teDsRSkcFqFfXRubluT0,oJ2m0l_5cmiyJk7do5sKvw) · [Full ERD](https://docs.google.com/document/d/1IrQWKFfS0T1dQtSAWwm2re9g-4PRUHArJcGMzZ8DLfs/edit?usp=sharing)
+
+![](docs/dividers/divider-blue-gold.png)
+
+
 
 ## 🚀 Installation
 
@@ -127,7 +167,7 @@ Run:
 ./mvnw spring-boot:run
 ```
 
-🟢 API at `http://localhost:8080`. Login uses hardcoded seed credentials (see `DataInitializer`) until real auth is built.
+API at `http://localhost:8080`. Login uses hardcoded seed credentials (see `DataInitializer`) until real auth is built.
 
 **Frontend** (`/frontend`)
 
@@ -137,32 +177,36 @@ npm install
 npm run dev
 ```
 
-🟢 App at `http://localhost:5173`.
+App at `http://localhost:5173`.
 
 ## ⚙️ API Reference
 
 
-| Method   | Endpoint                         | Description                                                                                                                          |
-| -------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| 🟡 POST  | `/api/login`                     | Authenticate with email + password                                                                                                   |
-| 🟢 GET   | `/api/library-items`             | All library items, or filter with `?instrument=`                                                                                     |
-| 🟢🟡🔵🔴 | `/api/practice-exercises[/{id}]` | Full CRUD endpoints (create/edit/delete via Postman only — student UI only toggles completion until the instructor dashboard exists) |
-| 🟢🟡🔵🔴 | `/api/practice-sessions[/{id}]`  | Full CRUD, all exposed in the student UI                                                                                             |
-| 🟡 POST  | `/api/contact-messages`          | Submit a message from the Contact form                                                                                               |
+| Method              | Endpoint                         | Description                                                                                                    |
+| ------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| 📤 POST             | `/api/login`                     | Authenticate with email + password                                                                             |
+| 🔍 GET              | `/api/library-items`             | All library items, or filter with `?instrument=`                                                               |
+| 🔍📤🔁🗑️ Full CRUD | `/api/practice-exercises[/{id}]` | Create/edit/delete via Postman only — student UI only toggles completion until the instructor dashboard exists |
+| 🔍📤🔁🗑️ Full CRUD | `/api/practice-sessions[/{id}]`  | All exposed in the student UI                                                                                  |
+| 📤 POST             | `/api/contact-messages`          | Submit a message from the Contact form                                                                         |
+
+
+![](docs/dividers/divider-gold-maroon.png)
 
 
 
+## 🎺 What's Next
 
-## 🎼 Roadmap to future development
+- 🔐 Real authentication — registration, hashed passwords, Spring Security
+- 🎹 Instructor dashboard — student and library management
+- 🎸 Multi-instrument support via a dedicated `Instrument` entity
+- 👨‍👩‍👧 Interactive parent portal with secure messaging and payment features
+- 🎧 In-app audio playback and backend deployment
 
-- Real authentication (registration, hashed passwords, Spring Security)
-- Instructor dashboard (student & library management)
-- Multi-instrument support via a dedicated `Instrument` entity
-- Interactive parent portal with secure messaging and payment features
-- In-app audio playback and backend deployment
+![](docs/dividers/divider-maroon-blue.png)
 
-
-
-## 🧑‍💻 Author
+## Author
 
 **Brooke Floyd** — [GitHub](https://github.com/BrookeFloyd10) · [Repository](https://github.com/BrookeFloyd10/Harmonotes-FullStack-Brooke-F)
+
+*Built by a lifelong music lover who wanted the gap between lesson and practice to be a little smaller.* 🎼
