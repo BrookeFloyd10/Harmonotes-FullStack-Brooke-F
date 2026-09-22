@@ -1,27 +1,22 @@
+<div align="center">
 
-
-![Harmonotes](docs/screenshots/hero.png)
+<img src="docs/screenshots/hero.png" alt="Harmonotes" width="100%" />
 
 **Where practice meets progress.** 🎵
-  
 
-
-🎤 **Live demo:** [harmonotesapp.netlify.app](https://harmonotesapp.netlify.app/) — frontend only; see [Installation](#-installation) to run the full app with a working backend.
+🎤 **Live demo:** [harmonotesapp.netlify.app](https://harmonotesapp.netlify.app/) — frontend only; see [Installation](#installation) to run the full app with a working backend.
 
 ![Entities](https://img.shields.io/badge/Entities-6-355367?style=flat-square) ![Controllers](https://img.shields.io/badge/Controllers-7-9E3845?style=flat-square) ![Components](https://img.shields.io/badge/Components-19+-E0AF3A?style=flat-square&logoColor=black) ![CRUD](https://img.shields.io/badge/CRUD-Full-355367?style=flat-square)
 
-![React](docs/icons/react-original.svg "React")![JavaScript](docs/icons/javascript-original.svg "JavaScript")![CSS3](docs/icons/css3-original.svg "CSS3")![Vite](docs/icons/vitejs-original.svg "Vite")![Java](docs/icons/java-original.svg "Java")![Spring Boot](docs/icons/spring-original.svg "Spring Boot")![Hibernate](docs/icons/hibernate-original.svg "Hibernate")![MySQL](docs/icons/mysql-original.svg "MySQL")![Netlify](docs/icons/netlify-original.svg "Netlify")![Git](docs/icons/git-original.svg "Git")
+<img src="docs/icons/react-original.svg" width="34" height="34" alt="React" title="React" /> <img src="docs/icons/javascript-original.svg" width="34" height="34" alt="JavaScript" title="JavaScript" /> <img src="docs/icons/css3-original.svg" width="34" height="34" alt="CSS3" title="CSS3" /> <img src="docs/icons/vitejs-original.svg" width="34" height="34" alt="Vite" title="Vite" /> <img src="docs/icons/java-original.svg" width="34" height="34" alt="Java" title="Java" /> <img src="docs/icons/spring-original.svg" width="34" height="34" alt="Spring Boot" title="Spring Boot" /> <img src="docs/icons/hibernate-original.svg" width="34" height="34" alt="Hibernate" title="Hibernate" /> <img src="docs/icons/mysql-original.svg" width="34" height="34" alt="MySQL" title="MySQL" /> <img src="docs/icons/netlify-original.svg" width="34" height="34" alt="Netlify" title="Netlify" /> <img src="docs/icons/git-original.svg" width="34" height="34" alt="Git" title="Git" />
 
-  
+[![Why](https://img.shields.io/badge/Why_I_Built_This-355367?style=for-the-badge)](#why-i-built-this) [![Preview](https://img.shields.io/badge/See_It_In_Action-9E3845?style=for-the-badge)](#see-it-in-action) [![Features](https://img.shields.io/badge/Features-E0AF3A?style=for-the-badge&logoColor=black)](#features) [![Learned](https://img.shields.io/badge/What_I_Learned-355367?style=for-the-badge)](#what-i-learned) [![Install](https://img.shields.io/badge/Installation-9E3845?style=for-the-badge)](#installation) [![Next](https://img.shields.io/badge/What's_Next-E0AF3A?style=for-the-badge&logoColor=black)](#whats-next)
 
+</div>
 
-![Why](https://img.shields.io/badge/Why_I_Built_This-355367?style=for-the-badge) ![Preview](https://img.shields.io/badge/See_It_In_Action-9E3845?style=for-the-badge) ![Features](https://img.shields.io/badge/Features-E0AF3A?style=for-the-badge&logoColor=black) ![Learned](https://img.shields.io/badge/What_I_Learned-355367?style=for-the-badge) ![Install](https://img.shields.io/badge/Installation-9E3845?style=for-the-badge) ![Next](https://img.shields.io/badge/What's_Next-E0AF3A?style=for-the-badge&logoColor=black)
+<img src="docs/dividers/divider-blue-gold.png" width="100%" />
 
-
-
-![](docs/dividers/divider-blue-gold.png)
-
-
+<a id="why-i-built-this"></a>
 
 ## 🎼 Why I Built This
 
@@ -33,40 +28,44 @@ Just one hour after a lesson, students forget over half of what they learned. Wi
 
 Built solo, front to back, as a full-stack capstone: React on the front end, Spring Boot on the back, MySQL underneath, with full CRUD across six real database entities.
 
-**Database entities:** 
-· `users` · `students` · `practice_sessions` ·
-· `practice_exercises` · `library_item` · `contact_messages` ·
+**Database entities:** `users` · `students` · `practice_sessions` · `practice_exercises` · `library_item` · `contact_messages`
 
-![](docs/dividers/divider-gold-maroon.png)
+<img src="docs/dividers/divider-gold-maroon.png" width="100%" />
 
-
+<a id="see-it-in-action"></a>
 
 ## 🎹 See It In Action
 
-*Dashboard*    ·    *Library*    ·    *Exercises & Theory*    ·    *About*    ·    *Musical staff nav*
+<p align="center">
+<em>Dashboard</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Library</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Exercises & Theory</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>About</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Musical staff nav</em>
+</p>
 
-
-|                                                                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](docs/screenshots/dashboard.png) ![](docs/screenshots/library-songs.png) ![](docs/screenshots/library-exercises.png) ![](docs/screenshots/about-page.png) ![](docs/screenshots/navbar-closeup.png) |
-
-
-  
-
+<table border="0" cellspacing="10" cellpadding="0"><tr><td align="center">
+<img src="docs/screenshots/dashboard.png" width="220" />&nbsp;&nbsp;
+<img src="docs/screenshots/library-songs.png" width="220" />&nbsp;&nbsp;
+<img src="docs/screenshots/library-exercises.png" width="220" />&nbsp;&nbsp;
+<img src="docs/screenshots/about-page.png" width="220" />&nbsp;&nbsp;
+<img src="docs/screenshots/navbar-closeup.png" width="220" />
+</td></tr></table>
 
 **A closer look at the details 🎶**
 
-*Login validation*   ·   *Log session*   ·   *Edit session*   ·   *Delete confirmation*   ·   *Contact validation*   ·   *Contact confirmation*
+<p align="center">
+<em>Login validation</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Log session</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Edit session</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Delete confirmation</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Contact validation</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Contact confirmation</em>
+</p>
 
+<table border="0" cellspacing="10" cellpadding="0"><tr><td align="center">
+<img src="docs/screenshots/login-validation.png" width="180" />&nbsp;&nbsp;
+<img src="docs/screenshots/log-session-form.png" width="180" />&nbsp;&nbsp;
+<img src="docs/screenshots/edit-session-form.png" width="180" />&nbsp;&nbsp;
+<img src="docs/screenshots/delete-modal.png" width="180" />&nbsp;&nbsp;
+<img src="docs/screenshots/contact-form-validation.png" width="180" />&nbsp;&nbsp;
+<img src="docs/screenshots/contact-form-success.png" width="180" />
+</td></tr></table>
 
-|                                                                                                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](docs/screenshots/login-validation.png) ![](docs/screenshots/log-session-form.png) ![](docs/screenshots/edit-session-form.png) ![](docs/screenshots/delete-modal.png) ![](docs/screenshots/contact-form-validation.png) ![](docs/screenshots/contact-form-success.png) |
+<img src="docs/dividers/divider-maroon-blue.png" width="100%" />
 
-
-![](docs/dividers/divider-maroon-blue.png)
-
-
+<a id="features"></a>
 
 ## 🎧 Features
 
@@ -76,7 +75,7 @@ Built solo, front to back, as a full-stack capstone: React on the front end, Spr
 🎵 Library filtering that hits a real backend query, not a client-side trick, grouped into Songs, Exercises, and Theory & Guides
 🎵 A Contact form that actually posts to a real backend entity and validates every field before it does
 
-![](docs/dividers/divider-blue-gold.png)
+<img src="docs/dividers/divider-blue-gold.png" width="100%" />
 
 ## 🛠️ Tech Stack
 
@@ -106,9 +105,9 @@ Harmonotes-FullStack-Brooke-F/
     └── utils/            # validators.js
 ```
 
-![](docs/dividers/divider-gold-maroon.png)
+<img src="docs/dividers/divider-gold-maroon.png" width="100%" />
 
-
+<a id="what-i-learned"></a>
 
 ## 🎓 What I Learned
 
@@ -118,82 +117,74 @@ This was my first time building something this size, end to end, alone — and a
 - **A silently-mismatched setter parameter can break persistence with zero error.** One `this.videoLink = this.videoLink;` typo meant a form field saved as `null` every time, with no exception to point at it — the kind of bug that only shows up when you go looking for it.
 - **Closures matter.** Passing a function reference (`onClick={handleDelete}`) vs. calling it immediately (`onClick={handleDelete()}`) is a distinction I now check for by instinct, not by accident.
 - **Raster images and CSS color filters don't mix cleanly.** Tracing my own nav icons from raster sprites into real vector paths fixed a rendering bug no amount of CSS tweaking could — sometimes the fix is at the asset level, not the stylesheet.
+- **A custom-built confirmation modal is a genuinely small amount of code** — state, a conditional render, a couple of props — once you actually understand what each piece is doing instead of copy-pasting a pattern.
 
-![](docs/dividers/divider-maroon-blue.png)
+<img src="docs/dividers/divider-maroon-blue.png" width="100%" />
 
 ## 🎻 Planning & Design
 
 Wireframes and an ERD were completed before writing a single line of code, including screens scoped for future development.
-  
 
+<p align="center">
+<em>Home / Login</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Desktop & tablet</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Mobile</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>About</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Future: Instructor view</em>
+</p>
 
-   ·    *Home / Login*    ·    *Desktop & tablet*    ·    *Mobile*    ·    *About*    ·    *Future: Instructor view*
+<table border="0" cellspacing="10" cellpadding="0"><tr><td align="center">
+<img src="docs/wireframes/wireframe-home-login.png" width="220" />&nbsp;&nbsp;
+<img src="docs/wireframes/wireframe-student-views.png" width="220" />&nbsp;&nbsp;
+<img src="docs/wireframes/wireframe-mobile.png" width="220" />&nbsp;&nbsp;
+<img src="docs/wireframes/wireframe-about.png" width="220" />&nbsp;&nbsp;
+<img src="docs/wireframes/wireframe-future-instructor.png" width="220" />
+</td></tr></table>
 
-
-|                                                                                                                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](docs/wireframes/wireframe-home-login.png) ![](docs/wireframes/wireframe-student-views.png) ![](docs/wireframes/wireframe-mobile.png) ![](docs/wireframes/wireframe-about.png) ![](docs/wireframes/wireframe-future-instructor.png) |
-
-
-![Harmonotes ERD](docs/erd/harmonotes-erd.png)
-
-*Entity Relationship Diagram — grayed-out tables are scoped for future development.*
+<img src="docs/erd/harmonotes-erd.png" alt="Harmonotes ERD" width="100%" />
+<p align="center"><em>Entity Relationship Diagram — grayed-out tables are scoped for future development.</em></p>
 
 [Full wireframe set](https://excalidraw.com/#json=1teDsRSkcFqFfXRubluT0,oJ2m0l_5cmiyJk7do5sKvw) · [Full ERD](https://docs.google.com/document/d/1IrQWKFfS0T1dQtSAWwm2re9g-4PRUHArJcGMzZ8DLfs/edit?usp=sharing)
 
-![](docs/dividers/divider-blue-gold.png)
+<img src="docs/dividers/divider-blue-gold.png" width="100%" />
 
-
+<a id="installation"></a>
 
 ## 🚀 Installation
 
 **Backend** (`/backend`)
-
 ```bash
 git clone https://github.com/BrookeFloyd10/Harmonotes-FullStack-Brooke-F.git
 cd Harmonotes-FullStack-Brooke-F/backend
 ```
-
 Create database `harmonotes` in MySQL, then add a `.env` file in `/backend`:
-
 ```
 DB_USERNAME=your_mysql_username
 DB_PASSWORD=your_mysql_password
 ```
-
 Run:
-
 ```bash
 ./mvnw spring-boot:run
 ```
-
 API at `http://localhost:8080`. Login uses hardcoded seed credentials (see `DataInitializer`) until real auth is built.
 
 **Frontend** (`/frontend`)
-
 ```bash
 cd ../frontend
 npm install
 npm run dev
 ```
-
 App at `http://localhost:5173`.
 
 ## ⚙️ API Reference
 
-
-| Method              | Endpoint                         | Description                                                                                                    |
-| ------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| 📤 POST             | `/api/login`                     | Authenticate with email + password                                                                             |
-| 🔍 GET              | `/api/library-items`             | All library items, or filter with `?instrument=`                                                               |
+| Method | Endpoint | Description |
+|---|---|---|
+| 📤 POST | `/api/login` | Authenticate with email + password |
+| 🔍 GET | `/api/library-items` | All library items, or filter with `?instrument=` |
 | 🔍📤🔁🗑️ Full CRUD | `/api/practice-exercises[/{id}]` | Create/edit/delete via Postman only — student UI only toggles completion until the instructor dashboard exists |
-| 🔍📤🔁🗑️ Full CRUD | `/api/practice-sessions[/{id}]`  | All exposed in the student UI                                                                                  |
-| 📤 POST             | `/api/contact-messages`          | Submit a message from the Contact form                                                                         |
+| 🔍📤🔁🗑️ Full CRUD | `/api/practice-sessions[/{id}]` | All exposed in the student UI |
+| 📤 POST | `/api/contact-messages` | Submit a message from the Contact form |
 
+<img src="docs/dividers/divider-gold-maroon.png" width="100%" />
 
-![](docs/dividers/divider-gold-maroon.png)
-
-
+<a id="whats-next"></a>
 
 ## 🎺 What's Next
 
@@ -203,7 +194,7 @@ App at `http://localhost:5173`.
 - 👨‍👩‍👧 Interactive parent portal with secure messaging and payment features
 - 🎧 In-app audio playback and backend deployment
 
-![](docs/dividers/divider-maroon-blue.png)
+<img src="docs/dividers/divider-maroon-blue.png" width="100%" />
 
 ## Author
 
