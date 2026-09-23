@@ -4,6 +4,8 @@
 
 **Where practice meets progress.** 🎵
 
+<br/>
+
 🎤 **Live demo:** [harmonotesapp.netlify.app](https://harmonotesapp.netlify.app/) — frontend only; see [Installation](#installation) to run the full app with a working backend.
 
 ![Entities](https://img.shields.io/badge/Entities-6-355367?style=flat-square) ![Controllers](https://img.shields.io/badge/Controllers-7-9E3845?style=flat-square) ![Components](https://img.shields.io/badge/Components-19+-E0AF3A?style=flat-square&logoColor=black) ![CRUD](https://img.shields.io/badge/CRUD-Full-355367?style=flat-square)
@@ -37,16 +39,22 @@ Built solo, front to back, as a full-stack capstone: React on the front end, Spr
 ## 🎹 See It In Action
 
 <p align="center">
-<em>Dashboard</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Library</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Exercises & Theory</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>About</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Musical staff nav</em>
+<em>Home / Login</em>&nbsp;&nbsp;·&nbsp;&nbsp; <em>Dashboard</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Library</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Exercises & Theory</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>About</em>
 </p>
 
-<table border="0" cellspacing="10" cellpadding="0"><tr><td align="center">
-<img src="docs/screenshots/dashboard.png" width="220" />&nbsp;&nbsp;
-<img src="docs/screenshots/library-songs.png" width="220" />&nbsp;&nbsp;
-<img src="docs/screenshots/library-exercises.png" width="220" />&nbsp;&nbsp;
-<img src="docs/screenshots/about-page.png" width="220" />&nbsp;&nbsp;
-<img src="docs/screenshots/navbar-closeup.png" width="220" />
-</td></tr></table>
+<table>
+  <tr>
+    <td>
+        <table border="0" cellspacing="10" cellpadding="0"><tr><td align="center">
+        <img src="docs/screenshots/home-login.png" height="220" />
+        <img src="docs/screenshots/dashboard.png" height="220" />
+        <img src="docs/screenshots/library-songs.png" height="220" />
+        <img src="docs/screenshots/library-exercises.png" height="220" />
+        <img src="docs/screenshots/about-page.png" height="220" />
+        </td></tr></table>
+    </td>
+  </tr>
+</table>
 
 **A closer look at the details 🎶**
 
@@ -54,14 +62,20 @@ Built solo, front to back, as a full-stack capstone: React on the front end, Spr
 <em>Login validation</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Log session</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Edit session</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Delete confirmation</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Contact validation</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Contact confirmation</em>
 </p>
 
-<table border="0" cellspacing="10" cellpadding="0"><tr><td align="center">
-<img src="docs/screenshots/login-validation.png" width="180" />&nbsp;&nbsp;
-<img src="docs/screenshots/log-session-form.png" width="180" />&nbsp;&nbsp;
-<img src="docs/screenshots/edit-session-form.png" width="180" />&nbsp;&nbsp;
-<img src="docs/screenshots/delete-modal.png" width="180" />&nbsp;&nbsp;
-<img src="docs/screenshots/contact-form-validation.png" width="180" />&nbsp;&nbsp;
-<img src="docs/screenshots/contact-form-success.png" width="180" />
-</td></tr></table>
+<table>
+  <tr>
+    <td>
+        <table border="0" cellspacing="10" cellpadding="0"><tr><td align="center">
+        <img src="docs/screenshots/login-validation.png" height="220" />&nbsp;
+        <img src="docs/screenshots/log-session-form.png" height="220" />&nbsp;
+        <img src="docs/screenshots/edit-session-form.png" height="220" />&nbsp;
+        <img src="docs/screenshots/delete-modal.png" height="220" />&nbsp;
+        <img src="docs/screenshots/contact-form-validation.png" height="220" />&nbsp;
+        <img src="docs/screenshots/contact-form-success.png" height="220" />
+        </td></tr></table>
+    </td>
+  </tr>
+</table>
 
 <img src="docs/dividers/divider-maroon-blue.png" width="100%" />
 
@@ -125,17 +139,24 @@ This was my first time building something this size, end to end, alone — and a
 
 Wireframes and an ERD were completed before writing a single line of code, including screens scoped for future development.
 
+
 <p align="center">
 <em>Home / Login</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Desktop & tablet</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Mobile</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>About</em> &nbsp;&nbsp;·&nbsp;&nbsp; <em>Future: Instructor view</em>
 </p>
 
-<table border="0" cellspacing="10" cellpadding="0"><tr><td align="center">
-<img src="docs/wireframes/wireframe-home-login.png" width="220" />&nbsp;&nbsp;
-<img src="docs/wireframes/wireframe-student-views.png" width="220" />&nbsp;&nbsp;
-<img src="docs/wireframes/wireframe-mobile.png" width="220" />&nbsp;&nbsp;
-<img src="docs/wireframes/wireframe-about.png" width="220" />&nbsp;&nbsp;
-<img src="docs/wireframes/wireframe-future-instructor.png" width="220" />
-</td></tr></table>
+<table>
+  <tr>
+    <td>
+    <table border="0" cellspacing="10" cellpadding="0"><tr><td align="center">
+    <img src="docs/wireframes/wireframe-home-login.png" height="220" />&nbsp;
+    <img src="docs/wireframes/wireframe-student-views.png" height="220" />&nbsp;
+    <img src="docs/wireframes/wireframe-mobile.png" height="220" />&nbsp;
+    <img src="docs/wireframes/wireframe-about.png" height="220" />&nbsp;
+    <img src="docs/wireframes/wireframe-future-instructor.png" height="220" />
+    </td></tr></table>
+    </td>
+  </tr>
+</table>
 
 <img src="docs/erd/harmonotes-erd.png" alt="Harmonotes ERD" width="100%" />
 <p align="center"><em>Entity Relationship Diagram — grayed-out tables are scoped for future development.</em></p>
