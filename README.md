@@ -131,7 +131,6 @@ This was my first time building something this size, end to end, alone — and a
 - **A silently-mismatched setter parameter can break persistence with zero error.** One `this.videoLink = this.videoLink;` typo meant a form field saved as `null` every time, with no exception to point at it — the kind of bug that only shows up when you go looking for it.
 - **Closures matter.** Passing a function reference (`onClick={handleDelete}`) vs. calling it immediately (`onClick={handleDelete()}`) is a distinction I now check for by instinct, not by accident.
 - **Raster images and CSS color filters don't mix cleanly.** Tracing my own nav icons from raster sprites into real vector paths fixed a rendering bug no amount of CSS tweaking could — sometimes the fix is at the asset level, not the stylesheet.
-- **A custom-built confirmation modal is a genuinely small amount of code** — state, a conditional render, a couple of props — once you actually understand what each piece is doing instead of copy-pasting a pattern.
 
 <img src="docs/dividers/divider-maroon-blue.png" width="100%" />
 
