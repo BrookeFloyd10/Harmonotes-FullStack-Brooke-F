@@ -6,9 +6,11 @@
 
 <br/>
 
-🎤 **Live demo:** [harmonotesapp.netlify.app](https://harmonotesapp.netlify.app/) — frontend only; see [Installation](#installation) to run the full app with a working backend.
+🎤 **Live frontend demo:** [harmonotesapp.netlify.app](https://harmonotesapp.netlify.app/). Run the backend locally to log in and use the full app; see [Installation](#installation).
 
-![Entities](https://img.shields.io/badge/Entities-6-355367?style=flat-square) ![Controllers](https://img.shields.io/badge/Controllers-7-9E3845?style=flat-square) ![Components](https://img.shields.io/badge/Components-19+-E0AF3A?style=flat-square&logoColor=black) ![CRUD](https://img.shields.io/badge/CRUD-Full-355367?style=flat-square)
+🔑 **Demo login:** `ChordRunner@gmail.com` / `K3ys&Ch0rds` (also shown on the Login page)
+
+[![Entities](https://img.shields.io/badge/Entities-6-355367?style=flat-square)](backend/src/main/java/com/harmonotesapp/backend/models) [![Controllers](https://img.shields.io/badge/Controllers-7-9E3845?style=flat-square)](backend/src/main/java/com/harmonotesapp/backend/controllers) [![Components](https://img.shields.io/badge/Components-19+-E0AF3A?style=flat-square&logoColor=black)](frontend/src/components) [![CRUD](https://img.shields.io/badge/CRUD-Full-355367?style=flat-square)](#api-reference)
 
 <img src="docs/icons/react-original.svg" width="34" height="34" alt="React" title="React" /> <img src="docs/icons/javascript-original.svg" width="34" height="34" alt="JavaScript" title="JavaScript" /> <img src="docs/icons/css3-original.svg" width="34" height="34" alt="CSS3" title="CSS3" /> <img src="docs/icons/vitejs-original.svg" width="34" height="34" alt="Vite" title="Vite" /> <img src="docs/icons/java-original.svg" width="34" height="34" alt="Java" title="Java" /> <img src="docs/icons/spring-original.svg" width="34" height="34" alt="Spring Boot" title="Spring Boot" /> <img src="docs/icons/hibernate-original.svg" width="34" height="34" alt="Hibernate" title="Hibernate" /> <img src="docs/icons/mysql-original.svg" width="34" height="34" alt="MySQL" title="MySQL" /> <img src="docs/icons/netlify-original.svg" width="34" height="34" alt="Netlify" title="Netlify" /> <img src="docs/icons/git-original.svg" width="34" height="34" alt="Git" title="Git" />
 
@@ -102,12 +104,14 @@ Built solo, front to back, as a full-stack capstone: React on the front end, Spr
 ```
 Harmonotes-FullStack-Brooke-F/
 ├── backend/src/main/java/com/harmonotesapp/backend/
-│   ├── config/          # DataInitializer (hardcoded seed data)
+│   ├── config/          # DataInitializer (demo user + JSON seed loader)
 │   ├── controllers/     # REST controllers, one per entity
 │   ├── dto/             # LoginRequestDTO
 │   ├── models/          # JPA entities
 │   ├── repositories/    # Spring Data JPA repositories
 │   └── services/        # PracticeSessionService
+├── backend/src/main/resources/
+│   └── seed-data/       # library-items.json, practice-exercises.json
 │
 └── frontend/src/
     ├── components/
@@ -173,16 +177,32 @@ Wireframes and an ERD were completed before writing a single line of code, inclu
 git clone https://github.com/BrookeFloyd10/Harmonotes-FullStack-Brooke-F.git
 cd Harmonotes-FullStack-Brooke-F/backend
 ```
-Create database `harmonotes` in MySQL, then add a `.env` file in `/backend`:
+Create database `harmonotes` in MySQL, then add a `.env` file in `/backend` (it's git-ignored, so your credentials stay local):
 ```
 DB_USERNAME=your_mysql_username
 DB_PASSWORD=your_mysql_password
 ```
+`application.properties` already contains the two lines that connect these values to the app, so there's nothing to add by hand:
+```properties
+spring.config.import=optional:file:.env[.properties]
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+```
+`spring.config.import` makes Spring Boot read `.env` at startup, and the `${...}` placeholders resolve from it, so **you don't need to set environment variables in IntelliJ**. The `.env` path is relative to the working directory, so start the app from `/backend` (in IntelliJ, check that the run configuration's working directory is the `backend` folder).
+
 Run:
 ```bash
 ./mvnw spring-boot:run
 ```
-API at `http://localhost:8080`. Login uses hardcoded seed credentials (see `DataInitializer`) until real auth is built.
+API at `http://localhost:8080`.
+
+**Demo data & login:** on first start against an empty database, `DataInitializer` creates the demo user and loads the Studio Library and Practice Exercises from `src/main/resources/seed-data/`. Each table is checked on its own, so restarting never creates duplicates. Practice History starts empty on purpose, since students create it by logging sessions. Log in with:
+
+| Email | Password |
+|---|---|
+| `ChordRunner@gmail.com` | `K3ys&Ch0rds` |
+
+These are hardcoded demo credentials until real authentication is built.
 
 **Frontend** (`/frontend`)
 ```bash
@@ -192,11 +212,12 @@ npm run dev
 ```
 App at `http://localhost:5173`.
 
+<a id="api-reference"></a>
 ## ⚙️ API Reference
 
 | Method | Endpoint | Description |
 |---|---|---|
-| 📤 POST | `/api/login` | Authenticate with email + password |
+| 📤 POST | `/api/login` | Authenticate with email + password; returns `401` with a `message` on invalid credentials |
 | 🔍 GET | `/api/library-items` | All library items, or filter with `?instrument=` |
 | 🔍📤🔁🗑️ Full CRUD | `/api/practice-exercises[/{id}]` | Create/edit/delete via Postman only — student UI only toggles completion until the instructor dashboard exists |
 | 🔍📤🔁🗑️ Full CRUD | `/api/practice-sessions[/{id}]` | All exposed in the student UI |
