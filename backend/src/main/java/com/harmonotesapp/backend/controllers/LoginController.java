@@ -5,8 +5,11 @@ import com.harmonotesapp.backend.models.User;
 import com.harmonotesapp.backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.Map;
 
 @CrossOrigin
 @RestController
@@ -16,12 +19,12 @@ public class LoginController {
     private UserRepository userRepository;
 
     @PostMapping
-    public User getUser(@RequestBody LoginRequestDTO loginRequestDTO) {
+    public ResponseEntity<?> getUser(@RequestBody LoginRequestDTO loginRequestDTO) {
         User user = userRepository.findUserByEmailAddress(loginRequestDTO.getEmailAddress());
             if (user != null && user.getPassword().equals(loginRequestDTO.getPassword())) {
-                return user;
+                return ResponseEntity.ok(user);
             } else {
-                throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid email or password");
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("message", "Invalid email or password"));
             }
         }
     }

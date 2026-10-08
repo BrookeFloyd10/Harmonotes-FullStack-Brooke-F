@@ -1,4 +1,8 @@
+import { useState } from "react";
+
+
 const PracticeCard = ({ exercise, onToggleComplete }) => {
+    const[ justCompleted, setJustCompleted ] = useState(false);
     
     const { title, description, duration, xpValue, videoLink, completed } = exercise;
     return (
@@ -11,9 +15,12 @@ const PracticeCard = ({ exercise, onToggleComplete }) => {
             <input id={`completed-${exercise.id}`} 
                 type="checkbox" 
                 checked={completed} 
-                onChange={() => onToggleComplete(exercise.id)}/>
+                onChange={() => {onToggleComplete(exercise.id);
+                                setJustCompleted(true);
+                }}/>
+
             </label>
-            {completed && (
+            {completed && justCompleted && (
                 <div className="confetti-container">
                     <span className="confetti-note confetti-up">♪</span>
                     <span className="confetti-note confetti-left">♫</span>

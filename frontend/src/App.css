@@ -235,6 +235,15 @@ main {
     font-size: clamp(.65rem, 1vw, .8rem);
 } 
 
+.demo-credentials {
+    color: #355367;
+    margin: 1rem;
+}
+
+.demo-credentials p {
+    margin: 0.2rem 0;
+    font-size: 0.85rem;
+}
 
 .dashboard-top {
     display: flex;
@@ -478,7 +487,7 @@ article {
 
 
 article:hover {
-    transform: translateY(-6px) scale(1.01);
+    transform: translateY(-6px) scale(1.0);
     box-shadow: 0 12px 28px #00000018, 0 4px 8px #00000010;
     border-color: #FFE5A1;
 }

@@ -78,6 +78,11 @@ const LoginForm = ({ setLoggedInUser }) => {
                                 error={errors.password}
                                 required/>
                         <Button id="submit-btn" type="submit" className="submit-btn" label="Login!"/>
+                        <div className="demo-credentials">
+                            <p><strong>Want to look around? Use the demo account:</strong></p>
+                            <p>Email: <code>ChordRunner@gmail.com</code></p>
+                            <p>Password: <code>K3ys&amp;Ch0rds</code></p>
+                        </div>
                     </form>
                 </div>
             );
