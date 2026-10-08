@@ -1,4 +1,4 @@
-import {Link} from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import trebleClef from '../../assets/images/trebleClef.svg';
 import eighthNote from '../../assets/images/eighthNote.svg';
 import sixteenthNote from '../../assets/images/sixteenthNote.svg';
@@ -8,9 +8,12 @@ import Button from '../shared/Button';
 import REstNote from '../../assets/images/REstNote.svg';
 
 const NavBar = ({ loggedInUser, setLoggedInUser }) =>{
+    const navigate = useNavigate();
+    
     const handleLogOut = () => {
         localStorage.removeItem("loggedInUser");
         setLoggedInUser(null);
+        navigate("/");
     }
     return(
         <nav className='nav-bar'>
