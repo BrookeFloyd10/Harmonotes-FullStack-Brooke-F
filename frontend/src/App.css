@@ -235,6 +235,15 @@ main {
     font-size: clamp(.65rem, 1vw, .8rem);
 } 
 
+.demo-credentials {
+    color: #355367;
+    margin: 1rem;
+}
+
+.demo-credentials p {
+    margin: 0.2rem 0;
+    font-size: 0.85rem;
+}
 
 .dashboard-top {
     display: flex;
